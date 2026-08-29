@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Cavallaro;Marcos;;;
+FN:Marcos Cavallaro
+ORG:Cavallaro Fitness
+TITLE:Entrenador
+TEL;TYPE=CELL,VOICE:+5493413357925
+URL:https://hernancapucci.github.io/cavallaro-fitness/
+X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/cavallarofitness/
+NOTE:Entrenamiento personalizado - Rosario y online
+END:VCARD

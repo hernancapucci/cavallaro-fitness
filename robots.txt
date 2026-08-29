@@ -1,0 +1,9 @@
+# CAVALLARO FITNESS — V1 en revisión.
+# Mientras el sitio esté en revisión, no se indexa.
+# Para publicar: reemplazar "Disallow: /" por "Allow: /" y quitar las
+# etiquetas <meta name="robots" content="noindex, nofollow"> de las dos páginas.
+
+User-agent: *
+Disallow: /
+
+Sitemap: https://hernancapucci.github.io/cavallaro-fitness/sitemap.xml

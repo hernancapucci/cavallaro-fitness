@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- ═══ V1 EN REVISIÓN — quitar estas 2 líneas para indexar (ver DEPLOY.md) ═══ -->
+<meta name="robots" content="noindex, nofollow">
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+
+<title>Marcos Cavallaro | Entrenador personal en Rosario y online</title>
+<meta name="description" content="Entrenamiento personalizado con seguimiento real: evaluación, plan mensual, corrección de la ejecución y ajustes. Presencial en Rosario y online. 20 años de experiencia.">
+<link rel="canonical" href="https://hernancapucci.github.io/cavallaro-fitness/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Cavallaro Fitness">
+<meta property="og:title" content="Marcos Cavallaro | Entrenador personal en Rosario y online">
+<meta property="og:description" content="Conmigo no comprás una rutina: comprás seguimiento, planificación y experiencia. Entrenamiento personalizado, presencial en Rosario y online.">
+<meta property="og:url" content="https://hernancapucci.github.io/cavallaro-fitness/">
+<meta property="og:image" content="https://hernancapucci.github.io/cavallaro-fitness/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Marcos Cavallaro — Cavallaro Fitness. Entrenamiento personalizado en Rosario y online.">
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="theme-color" content="#0d0d10">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+<link rel="preload" href="assets/fonts/barlow-condensed-700.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>
+@font-face{font-family:'Barlow Condensed';src:url('assets/fonts/barlow-condensed-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Barlow Condensed';src:url('assets/fonts/barlow-condensed-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+
+:root{
+  --bg:#0d0d10; --bg2:#131318; --card:#17171d; --line:#26262e; --line2:#33333d;
+  --tx:#ececed; --mut:#9a9aa4; --acc:#e8482a; --acc2:#ff6a3d;
+  --wrap:1080px; --r:14px;
+  --disp:'Barlow Condensed',"Helvetica Neue",Arial,sans-serif;
+  --body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3,.disp{font-family:var(--disp);text-transform:uppercase;line-height:1.02;letter-spacing:.005em;margin:0;font-weight:700}
+p{margin:0 0 1em}
+p:last-child{margin-bottom:0}
+
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 22px}
+section{padding:74px 0;border-top:1px solid var(--line)}
+.eyebrow{font-family:var(--disp);font-weight:600;text-transform:uppercase;letter-spacing:.22em;font-size:13px;color:var(--acc);margin:0 0 14px}
+h2{font-size:clamp(34px,6.4vw,52px);margin-bottom:10px}
+.lead{color:var(--mut);font-size:18px;max-width:62ch;margin-bottom:38px}
+
+/* ── BOTONES ── */
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:19px;text-decoration:none;padding:15px 26px;border-radius:10px;min-height:52px;transition:transform .12s ease,background .18s ease,border-color .18s ease}
+.btn:active{transform:translateY(1px)}
+.btn-p{background:var(--acc);color:#fff;border:1px solid var(--acc)}
+.btn-p:hover{background:var(--acc2);border-color:var(--acc2)}
+.btn-s{background:transparent;color:var(--tx);border:1px solid var(--line2)}
+.btn-s:hover{border-color:var(--mut)}
+.btn svg{width:20px;height:20px;flex:none;fill:currentColor}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+
+/* ── HERO ── */
+.hero{border-top:0;padding:38px 0 66px}
+.hero-grid{display:grid;grid-template-columns:1.35fr .95fr;gap:46px;align-items:center}
+.brandline{font-family:var(--disp);font-weight:700;text-transform:uppercase;letter-spacing:.3em;font-size:14px;color:var(--mut);margin:0 0 26px}
+.brandline b{color:var(--tx);font-weight:700}
+h1{font-size:clamp(42px,7.6vw,74px);margin-bottom:20px}
+h1 .n{display:block;color:var(--tx)}
+h1 .s{display:block;color:var(--acc)}
+.claim{font-size:20px;line-height:1.45;margin:0 0 18px;max-width:34ch}
+.claim b{color:#fff}
+.meta{color:var(--mut);font-size:16px;margin:0 0 30px;max-width:44ch}
+.portrait{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--line2);background:#000}
+.portrait img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.pt-tall img{aspect-ratio:3/4}
+
+/* ── MÉTODO ── */
+.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;position:relative}
+.step .num{font-family:var(--disp);font-weight:700;font-size:15px;color:var(--acc);letter-spacing:.14em;margin-bottom:10px}
+.step h3{font-size:26px;margin-bottom:10px}
+.step p{color:var(--mut);font-size:16px;margin-bottom:14px}
+.step .when{font-family:var(--disp);font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:13px;color:var(--tx);border-top:1px solid var(--line);padding-top:12px}
+.loop{margin-top:20px;background:var(--bg2);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:10px;padding:18px 22px;color:var(--mut);font-size:16px}
+.loop b{color:var(--tx)}
+
+/* ── CHIPS ── */
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.chip{font-family:var(--disp);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:17px;background:var(--card);border:1px solid var(--line2);border-radius:999px;padding:9px 17px}
+.note{color:var(--mut);font-size:16px;max-width:60ch}
+
+/* ── MODALIDADES ── */
+.mods{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.mod{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px 26px;display:flex;flex-direction:column}
+.mod h3{font-size:30px;margin-bottom:6px}
+.mod .for{color:var(--mut);font-size:16px;margin-bottom:20px}
+.flow{font-family:var(--disp);font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:16px;color:var(--tx);background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:13px 16px;margin-bottom:20px;line-height:1.5}
+.flow i{color:var(--acc);font-style:normal;padding:0 4px}
+.dl{margin:0 0 20px;font-size:16px}
+.dl dt{font-family:var(--disp);font-weight:600;text-transform:uppercase;letter-spacing:.11em;font-size:12px;color:var(--mut);margin-top:14px}
+.dl dt:first-child{margin-top:0}
+.dl dd{margin:3px 0 0;color:var(--tx)}
+.mod .btn{margin-top:auto;align-self:flex-start}
+
+/* ── MARCOS ── */
+.about{display:grid;grid-template-columns:.85fr 1.15fr;gap:46px;align-items:start}
+.facts{list-style:none;margin:0 0 26px;padding:0}
+.facts li{border-top:1px solid var(--line);padding:15px 0;font-size:16px;color:var(--mut)}
+.facts li:first-child{border-top:0;padding-top:0}
+.facts b{color:var(--tx);font-weight:600}
+.facts a{color:var(--acc2)}
+blockquote{margin:0 0 26px;padding:0 0 0 22px;border-left:3px solid var(--acc);font-size:18px;line-height:1.62}
+blockquote p{color:#d8d8dc}
+blockquote p:first-child::before{content:"“"}
+blockquote p:last-of-type::after{content:"”"}
+.sig{font-family:var(--disp);font-weight:600;text-transform:uppercase;letter-spacing:.14em;font-size:14px;color:var(--mut);margin-top:16px}
+
+/* ── FAQ ── */
+.faq{border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line)}
+summary{font-family:var(--disp);font-weight:600;text-transform:uppercase;font-size:22px;letter-spacing:.01em;padding:22px 40px 22px 0;cursor:pointer;list-style:none;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:8px;top:50%;width:11px;height:11px;margin-top:-8px;border-right:2px solid var(--acc);border-bottom:2px solid var(--acc);transform:rotate(45deg);transition:transform .2s}
+details[open] summary::after{transform:rotate(-135deg);margin-top:-3px}
+details .a{color:var(--mut);font-size:16.5px;padding:0 0 24px;max-width:70ch}
+
+/* ── CONTACTO ── */
+.cta-box{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:38px 32px}
+.cta-box .btn-p{font-size:22px;padding:18px 32px}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:32px;padding-top:28px;border-top:1px solid var(--line)}
+.contact-grid h4{font-family:var(--disp);font-weight:600;text-transform:uppercase;letter-spacing:.13em;font-size:12px;color:var(--mut);margin:0 0 7px}
+.contact-grid p{font-size:16px}
+.contact-grid a{color:var(--acc2)}
+
+/* ── PIE ── */
+footer{border-top:1px solid var(--line);padding:40px 0 118px;color:var(--mut);font-size:14.5px}
+.f-top{display:flex;flex-wrap:wrap;gap:14px 26px;justify-content:space-between;align-items:baseline}
+.f-brand{font-family:var(--disp);font-weight:700;text-transform:uppercase;letter-spacing:.22em;color:var(--tx);font-size:16px}
+.f-links{display:flex;gap:20px;flex-wrap:wrap}
+.f-links a{color:var(--mut);text-decoration:none;border-bottom:1px solid var(--line2);padding-bottom:2px}
+.f-links a:hover{color:var(--tx)}
+.f-legal{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px;line-height:1.7}
+.f-credit{margin-top:10px;font-size:13px;color:#6f6f79}
+.f-credit a{color:#8a8a94}
+
+/* ── BARRA FIJA MÓVIL ── */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(13,13,16,.94);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:11px 16px calc(11px + env(safe-area-inset-bottom));transform:translateY(115%);transition:transform .25s ease;display:none}
+.bar.on{transform:translateY(0)}
+.bar .btn{width:100%;justify-content:center}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .hero-txt{order:1}
+  .hero .portrait{order:2;max-width:300px;margin:0 auto}
+  .about{grid-template-columns:1fr;gap:32px}
+  .about .portrait{max-width:290px}
+  .steps,.mods{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr;gap:18px}
+  .bar{display:block}
+  section{padding:58px 0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- ══════════ 1 · HERO ══════════ -->
+<header class="hero">
+  <div class="wrap">
+    <p class="brandline"><b>Cavallaro</b> Fitness</p>
+    <div class="hero-grid">
+      <div class="hero-txt">
+        <h1>
+          <span class="n">Marcos Cavallaro</span>
+          <span class="s">Entrenamiento personalizado en Rosario y online</span>
+        </h1>
+        <p class="claim">Conmigo no comprás una rutina: <b>comprás seguimiento, planificación y experiencia.</b></p>
+        <p class="meta">Entrenador. 20 años entrenando personas. Presencial en zona centro y zona Echesortu de Rosario, y online con seguimiento.</p>
+        <div class="btn-row">
+          <a class="btn btn-p" data-cta="hero" href="https://wa.me/5493413357925?text=Hola%20Marcos%2C%20vi%20tu%20sitio%20y%20quer%C3%ADa%20consultarte%20por%20entrenamiento." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.67c2.2 0 4.27.86 5.83 2.42a8.2 8.2 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.25 8.24a8.24 8.24 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.26-8.24zm-2.5 4.1c-.19 0-.5.07-.76.35-.26.29-1 .98-1 2.38s1.03 2.76 1.17 2.95c.14.19 2 3.05 4.85 4.16 2.37.93 2.85.75 3.36.7.51-.05 1.65-.67 1.88-1.32.23-.65.23-1.21.16-1.33-.07-.11-.26-.18-.54-.32-.28-.14-1.65-.81-1.9-.9-.26-.1-.44-.14-.63.14-.19.28-.72.9-.88 1.09-.16.19-.32.21-.6.07-.28-.14-1.18-.44-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.5.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.62-1.52-.87-2.08-.21-.48-.43-.49-.62-.5h-.53z"/></svg>
+            Consultar por WhatsApp
+          </a>
+          <a class="btn btn-s" data-cta="hero-metodo" href="#como-trabajo">Cómo trabajo</a>
+        </div>
+      </div>
+      <figure class="portrait" style="margin:0">
+        <picture>
+          <source srcset="assets/img/retrato.webp" type="image/webp">
+          <img src="assets/img/retrato.jpg" width="800" height="800" alt="Marcos Cavallaro, entrenador, retrato sobre fondo negro." fetchpriority="high">
+        </picture>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ══════════ 2 · CÓMO TRABAJO ══════════ -->
+<section id="como-trabajo">
+  <div class="wrap">
+    <p class="eyebrow">Cómo trabajo</p>
+    <h2>Cuatro tiempos.<br>Tres de ellos giran.</h2>
+    <p class="lead">No creo en darle la misma rutina a todo el mundo. Esto es lo que hago, en el orden en que lo hago.</p>
+
+    <div class="steps">
+      <article class="step">
+        <div class="num">Tiempo 1</div>
+        <h3>Evaluar</h3>
+        <p>Antes de darte un plan, te evalúo personalmente. Quiero saber de dónde venís, qué venías entrenando, cuál es tu objetivo y cuáles son tus puntos fuertes y débiles.</p>
+        <div class="when">Una sola vez, al principio</div>
+      </article>
+      <article class="step">
+        <div class="num">Tiempo 2</div>
+        <h3>Planificar</h3>
+        <p>Con eso armo tu rutina: personalizada, con planificación mensual y una progresión pensada para vos y para tu punto de partida. Nada genérico.</p>
+        <div class="when">Cada mes</div>
+      </article>
+      <article class="step">
+        <div class="num">Tiempo 3</div>
+        <h3>Observar y corregir</h3>
+        <p>Miro cómo lo hacés. Presencial, te corrijo en el momento. Online, me mandás los videos y te los corrijo. Si un ejercicio no te está sirviendo, lo cambio.</p>
+        <div class="when">Todo el tiempo</div>
+      </article>
+      <article class="step">
+        <div class="num">Tiempo 4</div>
+        <h3>Medir y ajustar</h3>
+        <p>Seguimiento de peso, medidas y fotos. Comparo contra lo que esperábamos, analizo tu evolución y ajusto el plan: a fin de mes, o antes si hace falta.</p>
+        <div class="when">Cada mes, y durante el mes</div>
+      </article>
+    </div>
+
+    <p class="loop">Los tiempos <b>2, 3 y 4 no terminan: giran.</b> Cada mes se vuelve a planificar sobre lo que pasó el mes anterior. Eso es el seguimiento, y es lo que separa un plan de un archivo con ejercicios.</p>
+  </div>
+</section>
+
+<!-- ══════════ 3 · QUÉ PODÉS TRABAJAR ══════════ -->
+<section id="objetivos">
+  <div class="wrap">
+    <p class="eyebrow">Qué podés trabajar</p>
+    <h2>Si te reconocés acá,<br>esto es para vos</h2>
+    <div class="chips">
+      <span class="chip">Ganar masa muscular</span>
+      <span class="chip">Hipertrofia</span>
+      <span class="chip">Fuerza</span>
+      <span class="chip">Mejorar tu composición corporal</span>
+      <span class="chip">Aprender a ejecutar bien</span>
+      <span class="chip">Empezar de cero</span>
+      <span class="chip">Volver después de un parate</span>
+      <span class="chip">Dejar de entrenar sin plan</span>
+    </div>
+    <p class="note">Principiantes, intermedios y avanzados. Hombres y mujeres, de distintas edades y niveles. Cada uno desde su punto de partida, no desde el de otro.</p>
+  </div>
+</section>
+
+<!-- ══════════ 4 · PRESENCIAL U ONLINE ══════════ -->
+<section id="modalidades">
+  <div class="wrap">
+    <p class="eyebrow">Presencial u online</p>
+    <h2>Dos formas de entrenar<br>con el mismo trabajo detrás</h2>
+    <p class="lead">El método es el mismo en las dos. Lo que cambia es cómo llega.</p>
+
+    <div class="mods">
+      <article class="mod">
+        <h3>Presencial en Rosario</h3>
+        <p class="for">Para vos, si vivís en Rosario y querés que alguien esté al lado mirando cómo entrenás.</p>
+        <div class="flow">Evaluás <i>→</i> planificamos <i>→</i> entrenás acompañado <i>→</i> ajustamos</div>
+        <dl class="dl">
+          <dt>Dónde</dt><dd>Zona centro y zona Echesortu</dd>
+          <dt>Horarios</dt><dd>Lunes a viernes de 7 a 21 h · Sábados de 9 a 12 h</dd>
+          <dt>Incluye</dt><dd>Evaluación personal, rutina personalizada, planificación mensual, progresión, corrección técnica en el momento, seguimiento de peso, medidas y fotos, ajustes y consultas.</dd>
+        </dl>
+        <a class="btn btn-p" data-cta="presencial" href="https://wa.me/5493413357925?text=Hola%20Marcos%2C%20vi%20tu%20sitio%20y%20quer%C3%ADa%20consultarte%20por%20entrenamiento%20presencial%20en%20Rosario." target="_blank" rel="noopener">Consultar por presencial</a>
+      </article>
+
+      <article class="mod">
+        <h3>Online, con seguimiento</h3>
+        <p class="for">Para vos, si no estás en Rosario —o si estás, pero entrenás por tu cuenta y querés un plan y un seguimiento de verdad.</p>
+        <div class="flow">Grabás <i>→</i> me mandás <i>→</i> miro <i>→</i> te corrijo <i>→</i> ajusto</div>
+        <dl class="dl">
+          <dt>Dónde</dt><dd>Sin límite geográfico. Hoy tengo alumnos en Rosario, Santa Fe y Córdoba, y entrené alumnos fuera del país.</dd>
+          <dt>Incluye</dt><dd>Rutina personalizada, planificación mensual, progresión, corrección de videos, control de la ejecución, modificación de ejercicios, seguimiento de peso, medidas y fotos, ajustes durante el mes y consultas.</dd>
+        </dl>
+        <a class="btn btn-p" data-cta="online" href="https://wa.me/5493413357925?text=Hola%20Marcos%2C%20vi%20tu%20sitio%20y%20quer%C3%ADa%20consultarte%20por%20el%20entrenamiento%20online." target="_blank" rel="noopener">Consultar por online</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 5 · RESULTADOS — reservado, ver E.2 ══════════ -->
+
+<!-- ══════════ 6 · MARCOS ══════════ -->
+<section id="marcos">
+  <div class="wrap">
+    <p class="eyebrow">Marcos</p>
+    <h2>Veinte años<br>entrenando personas</h2>
+    <div class="about">
+      <div>
+        <figure class="portrait pt-tall" style="margin:0 0 22px">
+          <picture>
+            <source srcset="assets/img/retrato-detalle.webp" type="image/webp">
+            <img src="assets/img/retrato-detalle.jpg" width="540" height="720" alt="Marcos Cavallaro, entrenador en Rosario." loading="lazy">
+          </picture>
+        </figure>
+        <ul class="facts">
+          <li><b>20 años</b> trabajando como entrenador.</li>
+          <li>Vengo del fisicoculturismo: <b>competí y preparé atletas para competir.</b> En el Campeonato Argentino NPC 2024 preparé a un atleta que terminó <b>5.º de 12</b> en su categoría — figura en el <a href="https://www.npcsudamerica.com/wp-content/uploads/2025/03/2024-NPC-Worldwide-Argentino-Final-Placings-with-Overalls.pdf" target="_blank" rel="noopener">acta oficial de resultados</a>.</li>
+          <li><b>Cavallaro Fitness es marca registrada:</b> INPI Nº 3775144, clase 41, desde el 26 de diciembre de 2025.</li>
+        </ul>
+      </div>
+      <div>
+        <blockquote>
+          <p>No te diría que entrenes conmigo porque soy mejor que otro entrenador. Hay muchos buenos profesionales. Te diría que entrenes conmigo si buscás algo más que una rutina.</p>
+          <p>Mi trabajo es conocer tu cuerpo, entender cuál es tu objetivo, analizar tus puntos fuertes y débiles y adaptar el entrenamiento a vos. No creo en darle la misma rutina a todo el mundo.</p>
+          <p>Me importa que aprendas a entrenar, que entiendas por qué hacemos cada ejercicio, cómo ejecutarlo y cómo progresar. Y sobre todo, hago un seguimiento constante: observo tu evolución, detecto qué está funcionando y qué no, y voy haciendo ajustes.</p>
+          <p>Mi objetivo no es solamente que entrenes conmigo durante unos meses. Quiero que logres un cambio físico que puedas mantener y que aprendas a entrenar de verdad.</p>
+          <p>Si buscás alguien que simplemente te entregue una rutina, probablemente haya muchas opciones. Si buscás un entrenador que se involucre realmente en tu proceso, ahí sí creo que puedo ser una muy buena opción para vos.</p>
+        </blockquote>
+        <p class="sig">— Marcos Cavallaro</p>
+        <div class="btn-row" style="margin-top:26px">
+          <a class="btn btn-p" data-cta="marcos" href="https://wa.me/5493413357925?text=Hola%20Marcos%2C%20vi%20tu%20sitio%20y%20quer%C3%ADa%20consultarte%20por%20entrenamiento." target="_blank" rel="noopener">Escribirle a Marcos</a>
+          <a class="btn btn-s" data-cta="instagram-marcos" href="https://www.instagram.com/cavallarofitness/" target="_blank" rel="me noopener">Ver Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 7 · PREGUNTAS ══════════ -->
+<section id="preguntas">
+  <div class="wrap">
+    <p class="eyebrow">Preguntas</p>
+    <h2>Lo que suelen<br>preguntarme antes</h2>
+    <div class="faq" style="margin-top:30px">
+      <details>
+        <summary>¿Sirve si nunca entrené?</summary>
+        <div class="a">Sí. Trabajo con principiantes, con gente que entrena hace años y con todo lo que hay en el medio. Si nunca entrenaste, empezamos por lo que corresponde: aprender a ejecutar bien y armar una base. Nadie arranca por donde arranca otro.</div>
+      </details>
+      <details>
+        <summary>¿Tengo que entrenar en un gimnasio en particular?</summary>
+        <div class="a">Presencial entreno en zona centro y en zona Echesortu de Rosario. Si vos ya entrenás en otro lado, escribime y lo vemos: según el caso, puede convenirte la modalidad online, que funciona igual de bien y no depende de dónde entrenes.</div>
+      </details>
+      <details>
+        <summary>¿Cómo funciona el entrenamiento online?</summary>
+        <div class="a">Igual que el presencial, pero a distancia. Te evalúo, armo tu plan, y vos me mandás videos de tus series. Yo miro cómo ejecutás, te corrijo, y voy ajustando el plan con tu peso, tus medidas y tus fotos. La corrección de videos es el centro de la modalidad: es lo que hace que no sea simplemente una rutina enviada por mensaje.</div>
+      </details>
+      <details>
+        <summary>¿Cuánto sale?</summary>
+        <div class="a">Depende de la modalidad y de la frecuencia con la que trabajemos, y eso se define después de la evaluación: recién ahí sé qué necesitás realmente. Escribime y lo hablamos.</div>
+      </details>
+      <details>
+        <summary>¿Hacés planes de alimentación o de suplementación?</summary>
+        <div class="a">No. No soy nutricionista ni médico, y no doy planes de alimentación, dietas ni indicaciones de suplementación. Si necesitás eso, quien corresponde es un médico o un licenciado en nutrición. Lo mío es el entrenamiento, y ahí sí me involucro a fondo.</div>
+      </details>
+      <details>
+        <summary>¿Cómo empezamos?</summary>
+        <div class="a">Con una evaluación. Siempre evalúo personalmente antes de empezar a trabajar con alguien: sin eso no puedo armarte un plan que sea tuyo. Escribime por WhatsApp y coordinamos.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 8 · CONTACTO ══════════ -->
+<section id="contacto">
+  <div class="wrap">
+    <p class="eyebrow">Contacto</p>
+    <h2>Escribime y<br>arrancamos por la evaluación</h2>
+    <div class="cta-box">
+      <div class="btn-row">
+        <a class="btn btn-p" data-cta="contacto" href="https://wa.me/5493413357925?text=Hola%20Marcos%2C%20vi%20tu%20sitio%20y%20quer%C3%ADa%20consultarte%20por%20entrenamiento." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.67c2.2 0 4.27.86 5.83 2.42a8.2 8.2 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.25 8.24a8.24 8.24 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.26-8.24zm-2.5 4.1c-.19 0-.5.07-.76.35-.26.29-1 .98-1 2.38s1.03 2.76 1.17 2.95c.14.19 2 3.05 4.85 4.16 2.37.93 2.85.75 3.36.7.51-.05 1.65-.67 1.88-1.32.23-.65.23-1.21.16-1.33-.07-.11-.26-.18-.54-.32-.28-.14-1.65-.81-1.9-.9-.26-.1-.44-.14-.63.14-.19.28-.72.9-.88 1.09-.16.19-.32.21-.6.07-.28-.14-1.18-.44-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.5.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.62-1.52-.87-2.08-.21-.48-.43-.49-.62-.5h-.53z"/></svg>
+          Consultar por WhatsApp
+        </a>
+        <a class="btn btn-s" data-cta="tarjeta" href="tarjeta/">Guardar el contacto</a>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <h4>Dónde</h4>
+          <p>Rosario — zona centro y zona Echesortu.<br>Online, sin límite geográfico.</p>
+        </div>
+        <div>
+          <h4>Cuándo</h4>
+          <p>Lunes a viernes, de 7 a 21 h.<br>Sábados, de 9 a 12 h.</p>
+        </div>
+        <div>
+          <h4>Dónde más encontrarlo</h4>
+          <p><a href="https://www.instagram.com/cavallarofitness/" target="_blank" rel="me noopener" data-cta="instagram-contacto">Instagram @cavallarofitness</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div class="f-brand">Cavallaro Fitness</div>
+      <nav class="f-links">
+        <a href="https://www.instagram.com/cavallarofitness/" target="_blank" rel="me noopener">Instagram</a>
+        <a href="tarjeta/">Tarjeta de contacto</a>
+        <a href="https://wa.me/5493413357925" target="_blank" rel="noopener" data-cta="pie">WhatsApp</a>
+      </nav>
+    </div>
+    <div class="f-legal">
+      Marcos Cavallaro · Entrenamiento personalizado, presencial en Rosario y online.<br>
+      Marca registrada — INPI Nº 3775144, clase 41. © 2026.
+    </div>
+    <div class="f-credit">Sitio diseñado y desarrollado por <a href="https://ownsitestudio.com" target="_blank" rel="noopener nofollow">OwnSite Studio</a></div>
+  </div>
+</footer>
+
+<div class="bar" id="bar">
+  <a class="btn btn-p" data-cta="barra-fija" href="https://wa.me/5493413357925?text=Hola%20Marcos%2C%20vi%20tu%20sitio%20y%20quer%C3%ADa%20consultarte%20por%20entrenamiento." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.67c2.2 0 4.27.86 5.83 2.42a8.2 8.2 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.25 8.24a8.24 8.24 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.26-8.24zm-2.5 4.1c-.19 0-.5.07-.76.35-.26.29-1 .98-1 2.38s1.03 2.76 1.17 2.95c.14.19 2 3.05 4.85 4.16 2.37.93 2.85.75 3.36.7.51-.05 1.65-.67 1.88-1.32.23-.65.23-1.21.16-1.33-.07-.11-.26-.18-.54-.32-.28-.14-1.65-.81-1.9-.9-.26-.1-.44-.14-.63.14-.19.28-.72.9-.88 1.09-.16.19-.32.21-.6.07-.28-.14-1.18-.44-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.5.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.62-1.52-.87-2.08-.21-.48-.43-.49-.62-.5h-.53z"/></svg>
+    Consultar por WhatsApp
+  </a>
+</div>
+
+<script>
+(function(){
+  var bar=document.getElementById('bar'),h=document.querySelector('.hero');
+  if(!bar||!h||!('IntersectionObserver' in window))return;
+  new IntersectionObserver(function(e){bar.classList.toggle('on',!e[0].isIntersecting)},{rootMargin:'-70px 0px 0px 0px'}).observe(h);
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://hernancapucci.github.io/cavallaro-fitness/#website",
+      "name": "Cavallaro Fitness",
+      "url": "https://hernancapucci.github.io/cavallaro-fitness/",
+      "inLanguage": "es-AR",
+      "publisher": { "@id": "https://hernancapucci.github.io/cavallaro-fitness/#marcos" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://hernancapucci.github.io/cavallaro-fitness/#webpage",
+      "url": "https://hernancapucci.github.io/cavallaro-fitness/",
+      "name": "Marcos Cavallaro | Entrenador personal en Rosario y online",
+      "description": "Entrenamiento personalizado con seguimiento real: evaluación, plan mensual, corrección de la ejecución y ajustes. Presencial en Rosario y online.",
+      "isPartOf": { "@id": "https://hernancapucci.github.io/cavallaro-fitness/#website" },
+      "about": { "@id": "https://hernancapucci.github.io/cavallaro-fitness/#marcos" },
+      "primaryImageOfPage": { "@id": "https://hernancapucci.github.io/cavallaro-fitness/#retrato" },
+      "inLanguage": "es-AR",
+      "creditText": "Sitio diseñado y desarrollado por OwnSite Studio"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://hernancapucci.github.io/cavallaro-fitness/#retrato",
+      "contentUrl": "https://hernancapucci.github.io/cavallaro-fitness/assets/img/retrato.jpg",
+      "width": 800,
+      "height": 800,
+      "caption": "Marcos Cavallaro, entrenador."
+    },
+    {
+      "@type": "Brand",
+      "@id": "https://hernancapucci.github.io/cavallaro-fitness/#marca",
+      "name": "Cavallaro Fitness",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "INPI-AR",
+        "value": "3775144",
+        "description": "Marca registrada en el Instituto Nacional de la Propiedad Industrial (Argentina), clase 41, 26/12/2025."
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://hernancapucci.github.io/cavallaro-fitness/#marcos",
+      "name": "Marcos Cavallaro",
+      "givenName": "Marcos",
+      "familyName": "Cavallaro",
+      "jobTitle": "Entrenador",
+      "description": "Entrenador con 20 años de experiencia. Entrenamiento personalizado con evaluación, planificación mensual, corrección de la ejecución y seguimiento. Presencial en Rosario y online.",
+      "url": "https://hernancapucci.github.io/cavallaro-fitness/",
+      "image": { "@id": "https://hernancapucci.github.io/cavallaro-fitness/#retrato" },
+      "telephone": "+5493413357925",
+      "brand": { "@id": "https://hernancapucci.github.io/cavallaro-fitness/#marca" },
+      "sameAs": ["https://www.instagram.com/cavallarofitness/"],
+      "knowsAbout": [
+        "Entrenamiento de fuerza",
+        "Hipertrofia",
+        "Planificación del entrenamiento",
+        "Progresión de cargas",
+        "Técnica de ejecución",
+        "Composición corporal"
+      ],
+      "areaServed": [
+        { "@type": "City", "name": "Rosario" },
+        { "@type": "Country", "name": "Argentina" }
+      ],
+      "makesOffer": [
+        { "@id": "https://hernancapucci.github.io/cavallaro-fitness/#presencial" },
+        { "@id": "https://hernancapucci.github.io/cavallaro-fitness/#online" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://hernancapucci.github.io/cavallaro-fitness/#presencial",
+      "name": "Entrenamiento personalizado presencial en Rosario",
+      "serviceType": "Entrenamiento personalizado presencial",
+      "provider": { "@id": "https://hernancapucci.github.io/cavallaro-fitness/#marcos" },
+      "areaServed": { "@type": "City", "name": "Rosario" },
+      "description": "Evaluación personal, rutina personalizada, planificación mensual, progresión, corrección técnica en el momento y seguimiento de peso, medidas y fotos."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://hernancapucci.github.io/cavallaro-fitness/#online",
+      "name": "Entrenamiento online con seguimiento",
+      "serviceType": "Entrenamiento personalizado online",
+      "provider": { "@id": "https://hernancapucci.github.io/cavallaro-fitness/#marcos" },
+      "areaServed": { "@type": "Country", "name": "Argentina" },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://hernancapucci.github.io/cavallaro-fitness/#modalidades",
+        "availableLanguage": { "@type": "Language", "name": "Español" }
+      },
+      "description": "Rutina personalizada, planificación mensual, progresión, corrección de videos, control de la ejecución, seguimiento de peso, medidas y fotos, y ajustes durante el mes."
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
