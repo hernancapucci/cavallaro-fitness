@@ -86,7 +86,7 @@ h2.st{font-size:24px;font-weight:700;letter-spacing:-.03em;line-height:1.08;
   font-size:15px;font-weight:700;padding:16px 24px;min-height:52px;
   transition:background .15s ease}
 .cta:hover{background:#B36C0D}
-.cta.linea{background:none;color:var(--txt);border:1px solid #55555A;font-weight:600}
+.cta.linea{background:none;color:var(--txt);border:1px solid #66666B;font-weight:600}
 .cta.linea:hover{background:rgba(255,255,255,.06);border-color:#8E8E8A}
 .enl{display:inline-block;font-size:14px;font-weight:600;
   box-shadow:inset 0 -1px 0 0 var(--sec);padding:5px 0 4px}
