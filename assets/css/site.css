@@ -97,7 +97,7 @@ h2.st{font-size:24px;font-weight:700;letter-spacing:-.03em;line-height:1.08;
 /* ═══ 1 · HERO ═══ */
 .hero{background:#000}
 .hero .escena{position:relative;background:#000}
-.hero .escena .foto{height:min(56vh,440px);min-height:320px;object-position:62% 26%}
+.hero .escena .foto{height:min(50vh,392px);min-height:300px;object-position:62% 26%}
 .hero .cap{position:relative;margin-top:-96px;padding-top:70px;
   background:linear-gradient(rgba(11,11,12,0) 0,var(--fondo) 84px)}
 .hero .eti{color:rgba(255,255,255,.82)}
@@ -194,6 +194,16 @@ blockquote cite{display:block;font-style:normal;font-size:11px;letter-spacing:.1
 .pie nav a:hover{box-shadow:inset 0 -1px 0 0 var(--sec)}
 .pie .credito{margin-top:12px;font-size:10.5px}
 .pie .credito a{box-shadow:inset 0 -1px 0 0 var(--linea);padding:4px 0 3px;display:inline-block}
+
+/* ═══════════ pantallas de estrés · 359 px y menos ═══════════ */
+@media (max-width:359px){
+  :root{--pad:16px}
+  .gram{gap:11px}
+  .recorte{width:104px;height:104px}
+  .nota{grid-template-columns:22px 1fr;gap:9px}
+  .hero h1{font-size:36px}
+  h2.st{font-size:22px}
+}
 
 /* ═══════════ 640 px ═══════════ */
 @media (min-width:640px){
