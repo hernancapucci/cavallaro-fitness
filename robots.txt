@@ -1,7 +1,8 @@
-# CAVALLARO FITNESS — V1 en revisión.
+# CAVALLARO FITNESS — V1 en revisión humana.
 # Mientras el sitio esté en revisión, no se indexa.
-# Para publicar: reemplazar "Disallow: /" por "Allow: /" y quitar las
+# Para publicar de verdad: reemplazar "Disallow: /" por "Allow: /" y quitar las
 # etiquetas <meta name="robots" content="noindex, nofollow"> de las dos páginas.
+# Procedimiento completo en DEPLOY.md.
 
 User-agent: *
 Disallow: /

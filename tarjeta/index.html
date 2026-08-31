@@ -6,89 +6,104 @@
 
 <!-- ═══ V1 EN REVISIÓN — quitar esta línea para indexar (ver DEPLOY.md) ═══ -->
 <meta name="robots" content="noindex, nofollow">
+<!-- ═════════════════════════════════════════════════════════════════════ -->
 
-<title>Marcos Cavallaro | Contacto</title>
-<meta name="description" content="Contacto de Marcos Cavallaro — Cavallaro Fitness. Entrenamiento personalizado, presencial en Rosario y online. WhatsApp e Instagram.">
+<title>Marcos Cavallaro — Tarjeta de contacto</title>
+<meta name="description" content="Tarjeta de contacto de Marcos Cavallaro — Cavallaro Fitness. Entrenador en Rosario y online. WhatsApp, guardar contacto e Instagram.">
 <link rel="canonical" href="https://hernancapucci.github.io/cavallaro-fitness/tarjeta/">
 
 <meta property="og:type" content="profile">
 <meta property="og:locale" content="es_AR">
 <meta property="og:site_name" content="Cavallaro Fitness">
-<meta property="og:title" content="Marcos Cavallaro | Contacto">
-<meta property="og:description" content="Entrenador. Entrenamiento personalizado, presencial en Rosario y online.">
+<meta property="og:title" content="Marcos Cavallaro — Tarjeta de contacto">
+<meta property="og:description" content="Entrenador. Entrenamiento personalizado en Rosario y online.">
 <meta property="og:url" content="https://hernancapucci.github.io/cavallaro-fitness/tarjeta/">
 <meta property="og:image" content="https://hernancapucci.github.io/cavallaro-fitness/assets/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 
-<meta name="theme-color" content="#0d0d10">
+<meta name="theme-color" content="#0B0B0C">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
 
+<link rel="preload" href="../assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/site.css">
 <style>
-@font-face{font-family:'Barlow Condensed';src:url('../assets/fonts/barlow-condensed-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
-@font-face{font-family:'Barlow Condensed';src:url('../assets/fonts/barlow-condensed-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
-:root{--bg:#0d0d10;--card:#17171d;--line:#26262e;--line2:#33333d;--tx:#ececed;--mut:#9a9aa4;--acc:#e8482a;--acc2:#ff6a3d;
---disp:'Barlow Condensed',"Helvetica Neue",Arial,sans-serif;--body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--tx);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
-display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100svh;padding:26px 18px calc(26px + env(safe-area-inset-bottom))}
-img{max-width:100%;height:auto;display:block}
-.card{width:100%;max-width:380px;text-align:center}
-.ph{width:118px;height:118px;margin:0 auto 18px;border-radius:50%;overflow:hidden;border:1px solid var(--line2);background:#000}
-.ph img{width:100%;height:100%;object-fit:cover}
-.brand{font-family:var(--disp);font-weight:700;text-transform:uppercase;letter-spacing:.28em;font-size:12px;color:var(--acc);margin:0 0 8px}
-h1{font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:40px;line-height:1;letter-spacing:.005em;margin:0 0 8px}
-.role{font-family:var(--disp);font-weight:600;text-transform:uppercase;letter-spacing:.14em;font-size:14px;color:var(--tx);margin:0 0 4px}
-.svc{color:var(--mut);font-size:15px;margin:0 0 22px}
-.acts{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
-.btn{display:flex;align-items:center;justify-content:center;gap:10px;font-family:var(--disp);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:19px;text-decoration:none;padding:15px 20px;border-radius:10px;min-height:54px}
-.btn svg{width:20px;height:20px;flex:none;fill:currentColor}
-.btn-p{background:var(--acc);color:#fff}
-.btn-p:hover{background:var(--acc2)}
-.btn-s{background:var(--card);color:var(--tx);border:1px solid var(--line2)}
-.btn-s:hover{border-color:var(--mut)}
-.links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;font-size:14.5px;margin-bottom:22px}
-.links a{color:var(--mut);text-decoration:none;border-bottom:1px solid var(--line2);padding-bottom:2px}
-.links a:hover{color:var(--tx)}
-.foot{border-top:1px solid var(--line);padding-top:16px;color:#71717b;font-size:12.5px;line-height:1.7}
-.foot a{color:#8a8a94}
+  body{display:flex;flex-direction:column;min-height:100svh}
+  .tarjeta{width:100%;max-width:430px;margin:0 auto;flex:1;display:flex;flex-direction:column}
+  .tarjeta .escena{position:relative;background:#000}
+  .tarjeta .escena .foto{height:min(34vh,270px);min-height:190px;object-position:50% 20%}
+  .tarjeta .banda{position:relative;margin-top:-46px;padding:0 20px 4px;z-index:2;
+    background:linear-gradient(rgba(11,11,12,0) 0,var(--fondo) 46px)}
+  .tarjeta .recorte{width:96px;height:96px}
+    .tarjeta .banda .nota{padding-top:54px}
+  .tarjeta .cuerpo{padding:20px 20px calc(26px + env(safe-area-inset-bottom))}
+  .tarjeta .cuerpo img.firma{height:16px;width:auto}
+  .tarjeta h1{font-size:34px;font-weight:700;letter-spacing:-.035em;line-height:1;margin-top:16px}
+  .tarjeta .of{font-size:14px;color:var(--sec);margin-top:10px;line-height:1.5}
+  .tarjeta .cta{margin-top:10px}
+  .tarjeta .cta:first-of-type{margin-top:22px}
+  .tarjeta .otros{display:flex;flex-wrap:wrap;gap:18px;margin-top:20px;font-size:13px}
+  .tarjeta details{margin-top:20px;border-top:1px solid var(--linea);padding-top:14px}
+  .tarjeta summary{font-size:12.5px;color:var(--sec);cursor:pointer}
+  .tarjeta details .plano{font-size:13px;color:#D8D8D4;line-height:1.7;margin-top:10px;
+    user-select:all;-webkit-user-select:all}
+  .tarjeta .legal{font-size:10.5px;color:var(--sec);margin-top:22px;line-height:1.6}
 </style>
 </head>
+
 <body>
-
-<main class="card">
-  <div class="ph">
-    <picture>
-      <source srcset="../assets/img/retrato-320.webp" type="image/webp">
-      <img src="../assets/img/retrato-320.jpg" width="320" height="320" alt="Marcos Cavallaro." fetchpriority="high">
-    </picture>
+<main class="tarjeta">
+  <div class="escena">
+    <img class="foto" src="../assets/img/marcos.webp" width="470" height="570" fetchpriority="high"
+         alt="Marcos Cavallaro de perfil, con gorra y anteojos, en el gimnasio.">
   </div>
 
-  <p class="brand">Cavallaro Fitness</p>
-  <h1>Marcos Cavallaro</h1>
-  <p class="role">Entrenador · 20 años</p>
-  <p class="svc">Entrenamiento personalizado<br>Rosario · Presencial y online</p>
-
-  <div class="acts">
-    <a class="btn btn-p" data-cta="tarjeta-whatsapp" href="https://wa.me/5493413357925?text=Hola%20Marcos%2C%20me%20lleg%C3%B3%20tu%20tarjeta%20y%20quer%C3%ADa%20consultarte%20por%20entrenamiento." target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.67c2.2 0 4.27.86 5.83 2.42a8.2 8.2 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.25 8.24a8.24 8.24 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.26-8.24zm-2.5 4.1c-.19 0-.5.07-.76.35-.26.29-1 .98-1 2.38s1.03 2.76 1.17 2.95c.14.19 2 3.05 4.85 4.16 2.37.93 2.85.75 3.36.7.51-.05 1.65-.67 1.88-1.32.23-.65.23-1.21.16-1.33-.07-.11-.26-.18-.54-.32-.28-.14-1.65-.81-1.9-.9-.26-.1-.44-.14-.63.14-.19.28-.72.9-.88 1.09-.16.19-.32.21-.6.07-.28-.14-1.18-.44-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.5.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.62-1.52-.87-2.08-.21-.48-.43-.49-.62-.5h-.53z"/></svg>
-      WhatsApp
-    </a>
-    <a class="btn btn-s" data-cta="vcard" href="../marcos-cavallaro.vcf" download="marcos-cavallaro.vcf" type="text/vcard">Guardar contacto</a>
-    <a class="btn btn-s" data-cta="tarjeta-instagram" href="https://www.instagram.com/cavallarofitness/" target="_blank" rel="me noopener">Instagram</a>
+  <div class="banda">
+    <figure class="gram">
+      <div class="recorte">
+        <img src="../assets/img/recorte-mirada.webp" width="310" height="310"
+             alt="Detalle recortado de la misma fotografía: el rostro de Marcos con la atención puesta en la ejecución.">
+        <span class="n" aria-hidden="true">01</span>
+      </div>
+      <figcaption class="nota">
+        <span class="n" aria-hidden="true">01</span>
+        <p><b>Mira.</b> El recorte sale de la fotografía de arriba: la atención puesta en cómo se
+          ejecuta. Es lo que hace todos los días.</p>
+      </figcaption>
+    </figure>
   </div>
 
-  <nav class="links">
-    <a href="tel:+5493413357925" data-cta="tarjeta-tel">Llamar</a>
-    <a href="../" data-cta="tarjeta-sitio">Ver el sitio</a>
-  </nav>
+  <div class="cuerpo">
+    <img class="firma" src="../assets/img/cf-firma-neg.svg" width="773" height="105"
+         alt="Cavallaro Fitness">
+    <h1>Marcos<br>Cavallaro</h1>
+    <p class="of">Entrenador. Entrenamiento personalizado,<br>presencial en Rosario y online.</p>
 
-  <div class="foot">
-    Marca registrada — INPI Nº 3775144, clase 41.<br>
-    Sitio de <a href="https://ownsitestudio.com" target="_blank" rel="noopener nofollow">OwnSite Studio</a>
+    <a class="cta" href="https://wa.me/5493413357925?text=Hola%20Marcos%2C%20llegu%C3%A9%20por%20tu%20tarjeta%20y%20quer%C3%ADa%20consultarte%20por%20entrenamiento."
+       target="_blank" rel="noopener" data-cta="tarjeta-wa">WhatsApp · 341 335-7925</a>
+    <a class="cta linea" href="../marcos-cavallaro.vcf" type="text/vcard"
+       download="marcos-cavallaro.vcf" data-cta="vcard">Guardar contacto</a>
+    <a class="cta linea" href="https://www.instagram.com/cavallarofitness/" target="_blank"
+       rel="me noopener" data-cta="tarjeta-ig">Instagram · @cavallarofitness</a>
+
+    <p class="otros">
+      <a class="enl" href="tel:+5493413357925" data-cta="llamar">Llamar</a>
+      <a class="enl" href="../" data-cta="sitio">Ver el sitio</a>
+    </p>
+
+    <details>
+      <summary>¿No se guardó el contacto? Copiá los datos</summary>
+      <p class="plano">Marcos Cavallaro<br>
+        Cavallaro Fitness — Entrenador<br>
+        +54 9 341 335-7925<br>
+        instagram.com/cavallarofitness<br>
+        hernancapucci.github.io/cavallaro-fitness/</p>
+    </details>
+
+    <p class="legal">Cavallaro Fitness · Marca registrada INPI Nº 3775144, clase 41.<br>
+      Rosario, Argentina.</p>
   </div>
 </main>
 
@@ -100,7 +115,8 @@ h1{font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:40
       "@type": "WebPage",
       "@id": "https://hernancapucci.github.io/cavallaro-fitness/tarjeta/#webpage",
       "url": "https://hernancapucci.github.io/cavallaro-fitness/tarjeta/",
-      "name": "Marcos Cavallaro | Contacto",
+      "name": "Marcos Cavallaro — Tarjeta de contacto",
+      "description": "Tarjeta de contacto de Marcos Cavallaro — Cavallaro Fitness. Entrenador en Rosario y online.",
       "isPartOf": { "@id": "https://hernancapucci.github.io/cavallaro-fitness/#website" },
       "about": { "@id": "https://hernancapucci.github.io/cavallaro-fitness/#marcos" },
       "inLanguage": "es-AR"
@@ -112,7 +128,20 @@ h1{font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:40
       "jobTitle": "Entrenador",
       "url": "https://hernancapucci.github.io/cavallaro-fitness/",
       "telephone": "+5493413357925",
-      "sameAs": ["https://www.instagram.com/cavallarofitness/"]
+      "email": "marcoscavallaro81@gmail.com",
+      "sameAs": ["https://www.instagram.com/cavallarofitness/"],
+      "brand": { "@id": "https://hernancapucci.github.io/cavallaro-fitness/#marca" }
+    },
+    {
+      "@type": "Brand",
+      "@id": "https://hernancapucci.github.io/cavallaro-fitness/#marca",
+      "name": "Cavallaro Fitness",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "INPI-AR",
+        "value": "3775144",
+        "description": "Marca registrada en el INPI (Argentina), clase 41, concedida el 26/12/2025."
+      }
     }
   ]
 }

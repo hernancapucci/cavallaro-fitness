@@ -80,3 +80,32 @@ No hay analytics ni cookies, y es a propósito. Pero ya se puede medir:
   Marcos ve en el propio mensaje si la consulta vino de presencial, de online o de la
   tarjeta. Eso ya es medición, hoy, sin instalar nada.
 - El link de la biografía de Instagram debe llevar UTM desde el día uno.
+
+---
+
+## 6. V2 · Construcción sobre el sistema visual aprobado (2026-08-31)
+
+Reconstrucción completa sobre la **dirección D** aprobada, el **territorio ámbar** y la
+**dosis cromática** cerrada. Reemplaza la V1 (Barlow Condensed + rojo), que era anterior
+a la fase de identidad y de sistema visual.
+
+**Reglas del sistema que están codificadas en el HTML/CSS y que no hay que romper:**
+
+| Regla | Dónde vive |
+|---|---|
+| La gramática **fotografía + recorte + nota** aparece **dos veces** en la home: hero y resultados | `index.html`, clases `.gram` / `.recorte` / `.nota` |
+| Numeración **por sección**: cada bloque vuelve a `01` | los dos `.nota` dicen `01` |
+| El **ámbar aparece dos veces**: CTA del hero y CTA de contacto (más el número/filete y el borde del recorte del hero) | `--ambar` en `site.css` |
+| El **ámbar no entra en territorio de papel** (2,81:1) | `.papel .nota .n` y `.papel .recorte .n` pasan a negro |
+| El **papel queda reservado a la evidencia**: el único bloque claro es Resultados | `.sec.papel` sólo en `#resultados` |
+| **Nada se dibuja encima de la fotografía**: el recorte es un archivo aparte | `assets/img/recorte-*.webp` |
+| El tratamiento fotográfico está **horneado en el archivo** (grayscale · contraste 1,30 · brillo 0,90), no aplicado por CSS | `06-IMPLEMENTACION/assets.py` en el workspace |
+| **Archivo, familia única**, variable, 34 KB | `assets/fonts/archivo-var.woff2` |
+
+**Si desaparece el bloque de Resultados, la página queda entera en territorio oscuro y se
+pierde la alternancia.** La regla cromática aprobada exige que exista al menos un bloque
+de evidencia. No borrar ese bloque sin decidir qué pasa con el color.
+
+**Los assets se regeneran** con `~/CAVALLARO FITNESS/06-IMPLEMENTACION/assets.py`, que los
+emite desde la geometría maestra (`04-IDENTIDAD/maestra`) y desde los derivados
+fotográficos (`05-SISTEMA-VISUAL/inventario/derivados`). No editar los SVG a mano.
