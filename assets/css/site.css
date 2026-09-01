@@ -62,11 +62,24 @@ h2.st{font-size:24px;font-weight:700;letter-spacing:-.03em;line-height:1.08;
 .barra .marca img{height:17px;width:auto}
 .barra nav{display:none}
 
+/* ═══ integración con el campo negro ═══════════════════════════════════
+   Lleva el punto de negro del archivo (#161616 medido en M-02) al del sitio
+   (#0B0B0C) y disuelve los cantos. La máscara no recorta: atenúa. Se aplica
+   sólo a la fotografía que pertenece al espacio; la que cumple función
+   documental conserva su límite. */
+.integra{filter:contrast(1.104);
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 4%,#000 88%,transparent 100%),
+                     linear-gradient(to right,transparent 0,#000 4%,#000 96%,transparent 100%);
+          mask-image:linear-gradient(to bottom,transparent 0,#000 4%,#000 88%,transparent 100%),
+                     linear-gradient(to right,transparent 0,#000 4%,#000 96%,transparent 100%);
+  -webkit-mask-composite:source-in;
+          mask-composite:intersect}
+
 /* ═══ la gramática: nada se dibuja encima de la fotografía ═══ */
-.foto{width:100%;height:100%;object-fit:cover;background:#000}
+.foto{width:100%;height:100%;object-fit:cover;background:var(--fondo)}
 .gram{display:flex;gap:14px;align-items:flex-start}
 .recorte{position:relative;flex:0 0 auto;width:118px;height:118px;
-  border:1px solid rgba(255,255,255,.85);background:#000}
+  border:1px solid rgba(255,255,255,.85);background:var(--fondo)}
 .papel .recorte{border-color:var(--txt-p)}
 .recorte img{width:100%;height:100%;object-fit:cover}
 .recorte .n{position:absolute;left:-1px;top:-1px;background:var(--ambar);color:var(--fondo);
@@ -95,20 +108,16 @@ h2.st{font-size:24px;font-weight:700;letter-spacing:-.03em;line-height:1.08;
 .papel .enl:hover{box-shadow:inset 0 -1px 0 0 var(--txt-p)}
 
 /* ═══ 1 · HERO ═══ */
-.hero{background:#000}
-.hero .escena{position:relative;background:#000}
-.hero .escena .foto{height:min(50vh,392px);min-height:300px;object-position:62% 26%}
-.hero .cap{position:relative;margin-top:-96px;padding-top:70px;
-  background:linear-gradient(rgba(11,11,12,0) 0,var(--fondo) 84px)}
-.hero .eti{color:rgba(255,255,255,.82)}
-.hero h1{font-weight:700;letter-spacing:-.035em;line-height:.94;font-size:40px;margin-top:4px}
-.hero h1 .of{display:block;font-size:14px;font-weight:400;letter-spacing:0;
-  line-height:1.5;color:#B4B4B0;margin-top:14px;max-width:26em}
-.hero .accion{margin-top:26px}
-.hero .dif{font-size:18px;font-weight:500;line-height:1.35;max-width:20em}
-.hero .dif em{display:block;font-style:normal;color:#B4B4B0;margin-top:6px}
-.hero .gram{margin-top:22px}
-.hero .cta{margin-top:24px}
+.hero{padding:40px 0 0}
+.hero h1{font-weight:600;font-size:19px;letter-spacing:-.01em;line-height:1.1}
+.hero h1 .serv{display:block;font-weight:700;font-size:34px;letter-spacing:-.038em;
+  line-height:1.02;margin-top:10px;max-width:14ch}
+.hero .dif{font-size:18px;font-weight:500;line-height:1.4;color:#B4B4B0;margin-top:22px;max-width:24em}
+.hero .info{font-size:14.5px;line-height:1.55;color:var(--sec);margin-top:14px;max-width:34em}
+.hero .botones{display:flex;flex-direction:column;gap:10px;margin-top:28px}
+.hero .botones .cta{width:100%}
+.hero .retrato{margin-top:40px;line-height:0}
+.hero .retrato img{display:block;width:100%;height:auto}
 
 /* ═══ 2 · CÓMO TRABAJO ═══ */
 .tiempo{display:grid;grid-template-columns:28px 1fr;gap:12px;padding:18px 0;
@@ -155,10 +164,7 @@ h2.st{font-size:24px;font-weight:700;letter-spacing:-.03em;line-height:1.08;
 .reserv b{color:var(--txt-p)}
 
 /* ═══ 6 · MARCOS ═══ */
-.marcos{border-top:1px solid var(--linea)}
-.marcos .retrato{position:relative;background:#000}
-.marcos .retrato .foto{height:min(52vh,380px);min-height:280px;object-position:50% 22%}
-.marcos .txt{padding-top:32px;padding-bottom:44px}
+.marcos{border-top:1px solid var(--linea);padding:44px 0}
 .largo p{font-size:15px;line-height:1.75;max-width:32em;color:#D8D8D4}
 .largo p+p{margin-top:14px}
 blockquote{border-left:1px solid var(--sec);padding-left:16px;margin:18px 0;
@@ -201,7 +207,8 @@ blockquote cite{display:block;font-style:normal;font-size:11px;letter-spacing:.1
   .gram{gap:11px}
   .recorte{width:104px;height:104px}
   .nota{grid-template-columns:22px 1fr;gap:9px}
-  .hero h1{font-size:36px}
+  .hero h1 .serv{font-size:30px}
+  .hero .dif{font-size:17px}
   h2.st{font-size:22px}
 }
 
@@ -210,10 +217,14 @@ blockquote cite{display:block;font-style:normal;font-size:11px;letter-spacing:.1
   :root{--pad:32px}
   .sec{padding:56px 0}
   h2.st{font-size:28px}
-  .hero .escena .foto{height:min(62vh,520px);object-position:62% 26%}
-  .hero h1{font-size:56px}
-  .hero h1 .of{font-size:15px}
-  .hero .dif{font-size:20px}
+  .hero{padding-top:56px}
+  .hero h1{font-size:21px}
+  .hero h1 .serv{font-size:52px;margin-top:12px}
+  .hero .dif{font-size:20px;margin-top:26px}
+  .hero .info{font-size:15.5px}
+  .hero .botones{flex-direction:row;flex-wrap:wrap;gap:14px;margin-top:34px}
+  .hero .botones .cta{width:auto;padding:19px 34px;font-size:15.5px;min-height:60px}
+  .hero .retrato{margin-top:52px;max-width:520px}
   .lista{grid-template-columns:repeat(2,1fr)}
   .dos{grid-template-columns:1fr 1fr;gap:44px}
   .tiempo{grid-template-columns:34px 1fr 108px;gap:20px;align-items:baseline}
@@ -221,7 +232,6 @@ blockquote cite{display:block;font-style:normal;font-size:11px;letter-spacing:.1
   .fila{grid-template-columns:168px 1fr 92px;gap:20px}
   .fila .k{grid-column:auto;margin-bottom:0}
   .datos{grid-template-columns:repeat(2,1fr);gap:0 44px}
-  .marcos .retrato .foto{height:420px}
 }
 
 /* ═══════════ 1000 px ═══════════ */
@@ -236,21 +246,12 @@ blockquote cite{display:block;font-style:normal;font-size:11px;letter-spacing:.1
   .barra nav a:hover{color:var(--txt)}
   .barra .marca img{height:20px}
 
-  /* hero: la escena a sangre, el rótulo y la acción sobre el degradado */
-  /* la escena y el rótulo comparten celda: el texto se apoya sobre la fotografía */
-  .hero{display:grid}
-  .hero>.escena{grid-area:1/1}
-  .hero>.cap{grid-area:1/1;align-self:end;z-index:2;margin-top:0;
-    padding:120px 0 52px;
-    background:linear-gradient(rgba(11,11,12,0) 0,rgba(11,11,12,.62) 24%,rgba(11,11,12,.96) 60%)}
-  .hero .escena .foto{height:min(78vh,660px);min-height:560px}
-  .hero .cap .w{display:grid;grid-template-columns:1fr 440px;gap:48px;align-items:end}
-  .hero h1{font-size:72px}
-  .hero .accion{margin-top:0}
-  .hero .cta{display:inline-block;padding:16px 26px}
-  .hero .gram{margin-top:20px}
-  .hero .recorte{width:168px;height:168px}
-  .hero .nota p{max-width:22em}
+  /* hero: un solo eje. El texto manda; la fotografía es un objeto que
+     pertenece al mismo campo negro y no lleva nada escrito encima. */
+  .hero{padding:96px 0 104px}
+  .hero .w{display:grid;grid-template-columns:1fr 440px;gap:88px;align-items:center}
+  .hero h1 .serv{font-size:62px;max-width:13ch}
+  .hero .retrato{margin-top:0;max-width:none}
 
   .met{display:grid;grid-template-columns:300px 1fr;gap:56px}
   .met h2{margin-bottom:16px}
@@ -259,10 +260,6 @@ blockquote cite{display:block;font-style:normal;font-size:11px;letter-spacing:.1
   .evid{display:grid;grid-template-columns:1fr 400px;gap:52px;align-items:start}
   .evid-gram{margin-top:0}
   .papel .recorte{width:168px;height:168px}
-  .marcos .rejilla{display:grid;grid-template-columns:480px 1fr;align-items:stretch}
-  .marcos .retrato .foto{height:100%;min-height:520px}
-  .marcos .txt{padding:56px 64px;display:flex;flex-direction:column;justify-content:center}
-  .marcos .txt .w{padding:0;max-width:none}
   .contacto h2{font-size:38px}
   .contacto .cta{display:inline-block;padding:18px 30px;font-size:16px}
 }

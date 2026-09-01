@@ -109,3 +109,56 @@ de evidencia. No borrar ese bloque sin decidir qué pasa con el color.
 **Los assets se regeneran** con `~/CAVALLARO FITNESS/06-IMPLEMENTACION/assets.py`, que los
 emite desde la geometría maestra (`04-IDENTIDAD/maestra`) y desde los derivados
 fotográficos (`05-SISTEMA-VISUAL/inventario/derivados`). No editar los SVG a mano.
+
+---
+
+## 7. V3.2 · Un único campo negro (2026-09-01)
+
+Corrección del lenguaje visual después de comparar V1, V2 y las pruebas V3 / V3.1 / V3.2.
+La portada de V2 competía consigo misma: dos ejes de lectura, la gramática recorte/nota
+peleando con el mensaje, el CTA fuera del recorrido y una fotografía de 720 px estirada a
+pantalla completa. V3.2 quedó aprobada como dirección y este commit la extiende al sitio.
+
+**Reglas que están codificadas y que no hay que romper:**
+
+| Regla | Dónde vive |
+|---|---|
+| El sitio es **un único campo negro**. La única excepción es el territorio de papel, reservado a evidencia | `.sec.papel` sólo en `#resultados` |
+| **Ninguna fotografía se muestra por encima de su resolución nativa** | ver la tabla de escalas más abajo |
+| La fotografía que **pertenece al espacio** se integra con `.integra`: punto de negro igualado (`contrast(1.104)`) y cantos disueltos por máscara | `site.css`, clase `.integra` |
+| La fotografía con **función documental conserva su límite** | `.papel .recorte` mantiene su filete |
+| **Ningún fondo detrás de una foto más oscuro que la página** | `.foto` y `.recorte` usan `var(--fondo)`, ya no `#000` |
+| La gramática **plano + recorte + nota** aparece **una sola vez**, en Resultados, donde explica algo | `index.html`, `.evid-gram` |
+| El **ámbar sigue apareciendo dos veces**: CTA del hero y CTA de contacto | `--ambar` en `site.css` |
+| El hero tiene **un solo eje**: texto y botones arrancan en el mismo x que el H1 | `.hero .w` |
+| **Nada escrito encima de una fotografía**, en ninguna sección | — |
+
+**Escalas de las fotografías (mostrada ÷ nativa; nunca > 1):**
+
+| Archivo | Nativa | Home 1440 | Home 390 | Tarjeta 390 |
+|---|---|---|---|---|
+| `retrato-m02.webp` | 900 × 900 | 0,49 | 0,39 | — |
+| `marcos-retrato.webp` | 600 × 800 | — | — | 0,50 |
+| `recorte-disco.webp` | 180 × 180 | 0,92 | 0,64 | — |
+
+### ⚠ BLOQUEO PARA PUBLICAR — no levantar sin resolver esto
+
+El sitio usa ahora **M-02** (retrato de estudio) en el hero, en la tarjeta y en la imagen
+de compartir. **M-02 tiene dos impedimentos abiertos y documentados:**
+
+1. **Logotipo de Under Armour visible en cuadro.** Marca ajena en la fotografía que sostiene
+   toda la presencia de Marcos. Registrado en `04-IDENTIDAD/01-CIERRE-IDENTIDAD-BASE.md` §7
+   como **no recomendada para pieza principal ni hero definitivo**.
+2. **Cesión de derechos sin resolver.** Retrato de estudio, fotógrafo desconocido.
+   Ítem 44 de `01-ADENDA-MATERIAL-ORIGINAL.md`.
+
+Ninguno de los dos se resolvió acá y ninguno se disimuló. **Esta rama no se despliega**
+hasta que el cliente decida sobre los dos puntos, o hasta que exista la sesión de fotos
+propia que pide `05-SISTEMA-VISUAL/01-BRIEF-FOTOGRAFICO.md`. El `noindex` sigue puesto.
+
+### Qué se sacó, y qué se pierde con eso
+
+Salieron del sitio los derivados de M-03 (`escena`, `marcos`, `recorte-barra`,
+`recorte-mirada`): eran 720p tratados en blanco y negro y se mostraban ampliados. Con eso
+**el sitio ya no muestra a Marcos trabajando**, que era el mejor argumento visual del lote.
+Eso no se recupera con CSS: se recupera con la sesión de fotos del brief.
