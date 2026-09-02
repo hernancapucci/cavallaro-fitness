@@ -2,8 +2,11 @@
 
 ## 1. Estado actual
 
-Publicado en GitHub Pages desde la rama `main`, carpeta raíz, con dominio propio
-**`marcoscavallaro.com`** (registrado el 02/09/2026 en dattatec.com / DonWeb).
+Sitio estático sin build, sin dependencias y sin JavaScript. **Se publica en Vercel**
+desde la rama `main`; el repositorio se sirve tal cual, sin paso de compilación.
+
+Dominio propio **`marcoscavallaro.com`** (registrado el 02/09/2026 en dattatec.com /
+DonWeb). El sitio vive en el ápice; `www` redirige ahí.
 
 **El sitio es indexable.** Se abrió el 02/09/2026. `404.html` conserva su `noindex`,
 como corresponde a una página de error.
@@ -12,30 +15,34 @@ Pendiente documental que no bloquea: la cesión de derechos del retrato M-02 sig
 sin resolverse (ver §9). El logotipo de Under Armour en cuadro quedó resuelto por
 decisión del responsable del proyecto y no se modifica.
 
-## 2. Dominio propio y apertura a indexación — hecho el 02/09/2026
+## 2. Dominio propio, hosting y apertura a indexación
 
-El sitio vive en el ápice `marcoscavallaro.com`; `www` redirige ahí. La conexión se
-hace con el archivo **`CNAME`** en la raíz del repositorio, que es el mecanismo de
-GitHub Pages: su contenido es una sola línea con el dominio, sin `https://` ni barra.
+**Hosting: Vercel.** El proyecto no tiene framework ni build: Vercel sirve los archivos
+del repositorio. Toda la configuración vive en **`vercel.json`**, y son tres cosas:
 
-**DNS cargado en DonWeb** — cuatro registros A en el ápice a `185.199.108.153`,
-`.109.153`, `.110.153` y `.111.153`, más un CNAME de `www` a `hernancapucci.github.io.`
-Ningún registro más.
+- `"trailingSlash": true` — **no es cosmético.** El canonical de la tarjeta es
+  `https://marcoscavallaro.com/tarjeta/` con barra final. Sin esta línea Vercel
+  redirige a `/tarjeta` sin barra y la URL real deja de coincidir con el canonical.
+- Cabeceras del `.vcf`: `text/vcard` y `Content-Disposition: attachment`. Es lo que
+  hace que iOS ofrezca guardar el contacto en vez de mostrar el texto (ver §3).
+- Cache larga e inmutable para `/assets/*`.
 
-Lo que se cambió al migrar (los seis lugares donde vivía la URL absoluta):
+El dominio se conecta **desde el panel de Vercel** (Project → Settings → Domains). No
+hay archivo `CNAME` ni `.nojekyll`: eran de GitHub Pages y se eliminaron.
+
+**Los seis lugares donde vive la URL absoluta**, por si vuelve a mudarse:
 
 1. `<link rel="canonical">` de `index.html` y de `tarjeta/index.html`
 2. `og:url`, `og:image` y `twitter:image` de las dos páginas
 3. `@id`, `url` y `contentUrl` del JSON-LD de las dos páginas
-4. `sitemap.xml` (2 URLs + `lastmod`) y `robots.txt` (`Disallow` → `Allow` + Sitemap)
+4. `sitemap.xml` (2 URLs + `lastmod`) y `robots.txt` (`Allow` + Sitemap)
 5. `llms.txt` (URLs + sección Estado) y el campo `URL` de `marcos-cavallaro.vcf`
-6. `404.html`: las rutas absolutas dejaron de ser `/cavallaro-fitness/...` y pasaron a
-   `/...`, porque el sitio ya no vive en un subdirectorio. **Esto es fácil de olvidar
-   y rompe el 404 en silencio.**
+6. `404.html`: usa rutas absolutas de raíz (`/assets/...`). Si el sitio volviera a vivir
+   en un subdirectorio, **el 404 se rompe en silencio** — sin hoja de estilo y sin
+   enlaces.
 
-Y se retiró el `<meta name="robots" content="noindex, nofollow">` de las dos páginas
-públicas. GitHub hace **301 automático** desde `hernancapucci.github.io/cavallaro-fitness/`
-al dominio: la URL vieja no se pierde, redirige.
+Las dos páginas públicas no llevan `<meta name="robots">`: son indexables. El 404 sí
+lo lleva.
 
 Falta, y lo hace Hernán a mano: dar de alta el sitio en Google Search Console y enviar
 el `sitemap.xml`.
@@ -59,14 +66,11 @@ registrar `cavallarofitness.com` y `cavallarofitness.com.ar` de forma defensiva:
 primero coincide con la denominación registrada en el INPI y con el handle de
 Instagram, y dejarlos libres es una exposición innecesaria (`02-ARQUITECTURA/G.10`).
 
-## 5. Repositorio: la mejora que conviene hacer
+## 5. Repositorio
 
-Hoy el sitio vive en un repositorio de proyecto, y por eso la URL tiene una carpeta
-anidada (`/cavallaro-fitness/`). Lo correcto es una **organización de GitHub llamada
-`cavallarofitness`** con un repositorio `cavallarofitness.github.io`: la URL queda en
-la raíz (`https://cavallarofitness.github.io/`), la migración al dominio es más limpia,
-y de paso **reserva el nombre de la marca en GitHub**. La organización se crea a mano
-desde la web, es gratis y lleva dos minutos.
+El repositorio es `hernancapucci/cavallaro-fitness`. Como el hosting es Vercel y el
+dominio es propio, el nombre del repositorio ya no aparece en ninguna URL pública y
+no hay nada que reorganizar.
 
 ## 6. Dónde vive el número de teléfono
 

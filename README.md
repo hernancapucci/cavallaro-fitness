@@ -4,7 +4,7 @@ Sitio de **Marcos Cavallaro**, entrenador. Entrenamiento personalizado, presenci
 Rosario y online.
 
 **URL:** https://marcoscavallaro.com/
-**Estado:** V1 en revisión humana — publicada con `noindex` a propósito (ver `DEPLOY.md`).
+**Hosting:** Vercel, sin build. **Estado:** publicada e indexable desde el 02/09/2026.
 
 ## Qué es
 
@@ -17,6 +17,7 @@ framework, sin analytics, sin cookies, sin service worker.
 /marcos-cavallaro.vcf vCard 3.0
 /404.html             página de error
 /robots.txt  /sitemap.xml  /llms.txt
+vercel.json           trailingSlash, cabeceras del .vcf y cache de /assets
 /assets/css/site.css  una sola hoja, compartida por las dos páginas
 /assets/fonts/        Archivo variable (SIL OFL), 34 KB
 /assets/img/          identidad (SVG), fotografía (WebP), OG (JPG), íconos
