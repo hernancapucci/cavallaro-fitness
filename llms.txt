@@ -48,9 +48,9 @@
 
 ## Páginas
 
-- [Sitio principal](https://hernancapucci.github.io/cavallaro-fitness/): quién es, cómo
+- [Sitio principal](https://marcoscavallaro.com/): quién es, cómo
   trabaja, qué se puede trabajar, modalidades, resultados, trayectoria, preguntas y contacto.
-- [Tarjeta de contacto](https://hernancapucci.github.io/cavallaro-fitness/tarjeta/): datos
+- [Tarjeta de contacto](https://marcoscavallaro.com/tarjeta/): datos
   de contacto y archivo vCard.
 
 ## Evidencia verificable
@@ -72,4 +72,5 @@
 
 ## Estado
 
-Esta es la versión 1 del sitio, en revisión. Está publicada con `noindex` a propósito.
+Versión 1, publicada e indexable en https://marcoscavallaro.com/ desde el 2026-09-02.
+El sitio no usa analítica, cookies ni seguimiento de terceros.

@@ -3,7 +3,7 @@
 Sitio de **Marcos Cavallaro**, entrenador. Entrenamiento personalizado, presencial en
 Rosario y online.
 
-**URL:** https://hernancapucci.github.io/cavallaro-fitness/
+**URL:** https://marcoscavallaro.com/
 **Estado:** V1 en revisión humana — publicada con `noindex` a propósito (ver `DEPLOY.md`).
 
 ## Qué es

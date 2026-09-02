@@ -2,25 +2,43 @@
 
 ## 1. Estado actual
 
-Publicado en GitHub Pages desde la rama `main`, carpeta raíz.
+Publicado en GitHub Pages desde la rama `main`, carpeta raíz, con dominio propio
+**`marcoscavallaro.com`** (registrado el 02/09/2026 en dattatec.com / DonWeb).
 
-**El sitio está en `noindex`.** Es deliberado: el copy todavía no fue aprobado por
-Marcos, quedan formulaciones marcadas para revisión jurídica y la foto no tiene
-cesión de derechos del fotógrafo.
+**El sitio es indexable.** Se abrió el 02/09/2026. `404.html` conserva su `noindex`,
+como corresponde a una página de error.
 
-## 2. Para publicarlo de verdad (indexable)
+Pendiente documental que no bloquea: la cesión de derechos del retrato M-02 sigue
+sin resolverse (ver §9). El logotipo de Under Armour en cuadro quedó resuelto por
+decisión del responsable del proyecto y no se modifica.
 
-Tres cambios, en este orden:
+## 2. Dominio propio y apertura a indexación — hecho el 02/09/2026
 
-1. `index.html` → borrar la línea `<meta name="robots" content="noindex, nofollow">`
-2. `tarjeta/index.html` → borrar la misma línea
-3. `robots.txt` → cambiar `Disallow: /` por `Allow: /`
-4. `sitemap.xml` → poner la fecha real de publicación en los dos `<lastmod>`
-5. `llms.txt` → en la sección **Estado**, sacar «en revisión / publicada con `noindex`»
+El sitio vive en el ápice `marcoscavallaro.com`; `www` redirige ahí. La conexión se
+hace con el archivo **`CNAME`** en la raíz del repositorio, que es el mecanismo de
+GitHub Pages: su contenido es una sola línea con el dominio, sin `https://` ni barra.
 
-`404.html` **conserva** su `noindex`: una página de error no se indexa nunca.
+**DNS cargado en DonWeb** — cuatro registros A en el ápice a `185.199.108.153`,
+`.109.153`, `.110.153` y `.111.153`, más un CNAME de `www` a `hernancapucci.github.io.`
+Ningún registro más.
 
-Después: dar de alta el sitio en Google Search Console y enviar el `sitemap.xml`.
+Lo que se cambió al migrar (los seis lugares donde vivía la URL absoluta):
+
+1. `<link rel="canonical">` de `index.html` y de `tarjeta/index.html`
+2. `og:url`, `og:image` y `twitter:image` de las dos páginas
+3. `@id`, `url` y `contentUrl` del JSON-LD de las dos páginas
+4. `sitemap.xml` (2 URLs + `lastmod`) y `robots.txt` (`Disallow` → `Allow` + Sitemap)
+5. `llms.txt` (URLs + sección Estado) y el campo `URL` de `marcos-cavallaro.vcf`
+6. `404.html`: las rutas absolutas dejaron de ser `/cavallaro-fitness/...` y pasaron a
+   `/...`, porque el sitio ya no vive en un subdirectorio. **Esto es fácil de olvidar
+   y rompe el 404 en silencio.**
+
+Y se retiró el `<meta name="robots" content="noindex, nofollow">` de las dos páginas
+públicas. GitHub hace **301 automático** desde `hernancapucci.github.io/cavallaro-fitness/`
+al dominio: la URL vieja no se pierde, redirige.
+
+Falta, y lo hace Hernán a mano: dar de alta el sitio en Google Search Console y enviar
+el `sitemap.xml`.
 
 ## 3. Verificaciones obligatorias antes de publicar
 
@@ -34,25 +52,12 @@ Después: dar de alta el sitio en Google Search Console y enviar el `sitemap.xml
 Si el `.vcf` falla en iOS: el respaldo es el atributo `download` (ya está puesto) y,
 si tampoco, generarlo con JavaScript. Último recurso: los datos en texto seleccionable.
 
-## 4. Migración a dominio propio
+## 4. Migración a dominio propio — hecha
 
-GitHub Pages hace **301 automático** desde la URL de `github.io` al dominio propio en
-cuanto se conecta. La migración no pierde nada.
-
-**Los 5 lugares donde vive la URL absoluta** (más el archivo `CNAME`):
-
-1. `<link rel="canonical">` de `index.html` y de `tarjeta/index.html`
-2. `og:url` y `og:image` de las dos páginas
-3. `sitemap.xml` (2 URLs)
-4. `@id` y `url` dentro del JSON-LD de las dos páginas
-5. `llms.txt` (3 URLs) y el campo `URL` de `marcos-cavallaro.vcf`
-
-Buscar y reemplazar `https://hernancapucci.github.io/cavallaro-fitness` por el dominio.
-Nada más. Ningún link interno es absoluto.
-
-**Dominio recomendado:** `cavallarofitness.com` como principal y
-`cavallarofitness.com.ar` defensivo (este último exige CUIT/CUIL y Clave Fiscal
-nivel 2 a nombre de Marcos).
+Ver §2. El sitio ya vive en `marcoscavallaro.com`. Queda como recomendación abierta
+registrar `cavallarofitness.com` y `cavallarofitness.com.ar` de forma defensiva: el
+primero coincide con la denominación registrada en el INPI y con el handle de
+Instagram, y dejarlos libres es una exposición innecesaria (`02-ARQUITECTURA/G.10`).
 
 ## 5. Repositorio: la mejora que conviene hacer
 
@@ -87,7 +92,7 @@ No hay analytics ni cookies, y es a propósito. Pero ya se puede medir:
 
 ---
 
-## 6. V2 · Construcción sobre el sistema visual aprobado (2026-08-31)
+## 8. V2 · Construcción sobre el sistema visual aprobado (2026-08-31)
 
 Reconstrucción completa sobre la **dirección D** aprobada, el **territorio ámbar** y la
 **dosis cromática** cerrada. Reemplaza la V1 (Barlow Condensed + rojo), que era anterior
@@ -116,7 +121,7 @@ fotográficos (`05-SISTEMA-VISUAL/inventario/derivados`). No editar los SVG a ma
 
 ---
 
-## 7. V3.2 · Un único campo negro (2026-09-01)
+## 9. V3.2 · Un único campo negro (2026-09-01)
 
 Corrección del lenguaje visual después de comparar V1, V2 y las pruebas V3 / V3.1 / V3.2.
 La portada de V2 competía consigo misma: dos ejes de lectura, la gramática recorte/nota

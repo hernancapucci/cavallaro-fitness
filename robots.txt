@@ -1,10 +1,8 @@
-# CAVALLARO FITNESS — V1 en revisión humana.
-# Mientras el sitio esté en revisión, no se indexa.
-# Para publicar de verdad: reemplazar "Disallow: /" por "Allow: /" y quitar las
-# etiquetas <meta name="robots" content="noindex, nofollow"> de las dos páginas.
-# Procedimiento completo en DEPLOY.md.
+# Marcos Cavallaro — Cavallaro Fitness
+# Entrenamiento personalizado, presencial en Rosario y online.
+# Sitio estático, sin backend, sin analítica, sin cookies.
 
 User-agent: *
-Disallow: /
+Allow: /
 
-Sitemap: https://hernancapucci.github.io/cavallaro-fitness/sitemap.xml
+Sitemap: https://marcoscavallaro.com/sitemap.xml
