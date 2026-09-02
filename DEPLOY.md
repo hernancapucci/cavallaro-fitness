@@ -15,6 +15,10 @@ Tres cambios, en este orden:
 1. `index.html` → borrar la línea `<meta name="robots" content="noindex, nofollow">`
 2. `tarjeta/index.html` → borrar la misma línea
 3. `robots.txt` → cambiar `Disallow: /` por `Allow: /`
+4. `sitemap.xml` → poner la fecha real de publicación en los dos `<lastmod>`
+5. `llms.txt` → en la sección **Estado**, sacar «en revisión / publicada con `noindex`»
+
+`404.html` **conserva** su `noindex`: una página de error no se indexa nunca.
 
 Después: dar de alta el sitio en Google Search Console y enviar el `sitemap.xml`.
 
@@ -141,20 +145,24 @@ pantalla completa. V3.2 quedó aprobada como dirección y este commit la extiend
 | `marcos-retrato.webp` | 600 × 800 | — | — | 0,50 |
 | `recorte-disco.webp` | 180 × 180 | 0,92 | 0,64 | — |
 
-### ⚠ BLOQUEO PARA PUBLICAR — no levantar sin resolver esto
+### M-02 · estado de los dos puntos abiertos (actualizado 2026-09-02)
 
-El sitio usa ahora **M-02** (retrato de estudio) en el hero, en la tarjeta y en la imagen
-de compartir. **M-02 tiene dos impedimentos abiertos y documentados:**
+El sitio usa **M-02** (retrato de estudio) en el hero, en la tarjeta y en la imagen de
+compartir. Los dos puntos que estaban registrados como impedimento quedaron así:
 
-1. **Logotipo de Under Armour visible en cuadro.** Marca ajena en la fotografía que sostiene
-   toda la presencia de Marcos. Registrado en `04-IDENTIDAD/01-CIERRE-IDENTIDAD-BASE.md` §7
-   como **no recomendada para pieza principal ni hero definitivo**.
-2. **Cesión de derechos sin resolver.** Retrato de estudio, fotógrafo desconocido.
-   Ítem 44 de `01-ADENDA-MATERIAL-ORIGINAL.md`.
+1. **Logotipo de Under Armour visible en cuadro.** *Resuelto por decisión.* El responsable
+   del proyecto resolvió el 2026-09-02 que la marca ajena en cuadro **no constituye un
+   bloqueo de publicación**. El logotipo **no se modifica, no se oculta y no se retoca**.
+   La observación de `04-IDENTIDAD/01-CIERRE-IDENTIDAD-BASE.md` §7 queda como criterio de
+   preferencia para la futura sesión propia, no como condición de publicación.
+2. **Origen y cesión de derechos de la fotografía.** *Pendiente, y sigue pendiente.*
+   Retrato de estudio, fotógrafo desconocido. Ítem 44 de `01-ADENDA-MATERIAL-ORIGINAL.md`.
+   Por decisión del responsable del proyecto **no detiene la implementación ni el
+   despliegue**, pero **no se da por saldado**: conviene cerrarlo antes de que el sitio
+   tenga difusión sostenida, y se cierra definitivamente con la sesión de fotos propia
+   que pide `05-SISTEMA-VISUAL/01-BRIEF-FOTOGRAFICO.md`.
 
-Ninguno de los dos se resolvió acá y ninguno se disimuló. **Esta rama no se despliega**
-hasta que el cliente decida sobre los dos puntos, o hasta que exista la sesión de fotos
-propia que pide `05-SISTEMA-VISUAL/01-BRIEF-FOTOGRAFICO.md`. El `noindex` sigue puesto.
+Ninguno de los dos se disimuló en el sitio. **No hay bloqueo técnico para desplegar.**
 
 ### Qué se sacó, y qué se pierde con eso
 
