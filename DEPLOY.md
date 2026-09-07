@@ -179,3 +179,110 @@ Salieron del sitio los derivados de M-03 (`escena`, `marcos`, `recorte-barra`,
 `recorte-mirada`): eran 720p tratados en blanco y negro y se mostraban ampliados. Con eso
 **el sitio ya no muestra a Marcos trabajando**, que era el mejor argumento visual del lote.
 Eso no se recupera con CSS: se recupera con la sesión de fotos del brief.
+
+---
+
+## 10. La estrategia nutricional entra al acompañamiento (2026-09-07)
+
+Decisión del **titular del servicio**, tomada con conocimiento de las observaciones que constan
+en `~/CAVALLARO FITNESS/00-EXPEDIENTE-INVESTIGACION.md` §24, que le fueron comunicadas antes.
+El sitio deja de comunicar que la nutrición está excluida y pasa a comunicarla como parte del
+acompañamiento.
+
+### Qué se aprobó
+
+La estrategia nutricional es **uno de los cinco componentes del acompañamiento**, en las dos
+modalidades y sin costo aparte:
+
+> evaluación inicial · plan mensual con progresión · corrección de la ejecución ·
+> medición y ajuste mensual · **estrategia nutricional aplicada al objetivo**
+
+Esa enumeración es **la descripción canónica del servicio** y aparece idéntica en las cinco
+superficies: contenido visible, `meta description`, Open Graph/Twitter, JSON-LD y `llms.txt`.
+Si cambia, cambia en las cinco.
+
+### La fuente del contenido
+
+Todo lo que el sitio afirma sobre alimentación sale de declaraciones textuales de Marcos en
+`evidencia/entrevista-marcos-2026-08-27.md`, y **de ninguna otra parte**:
+
+| Textual | Dónde se usa |
+|---|---|
+| P6 · *"Orientación nutricional general"* / *"Estrategia nutricional más individualizada"* | El componente y su nombre. **"Estrategia nutricional" es palabra suya**, no nuestra |
+| P2 · *"todo tipo de dietas, normal, vegetariana, vegana, volumen, definición"* | La línea de §3 sobre vegetariano y vegano |
+| P6 · *"Seguimiento de peso/medidas/fotos"* | Que el ajuste nutricional ocurra en la medición mensual ya existente |
+
+**No se agregó ninguna prestación que Marcos no haya declarado.**
+
+### La regla de atribución — es la que no se puede romper
+
+**Marcos Cavallaro es entrenador.** El componente nutricional pertenece al **acompañamiento de
+Cavallaro Fitness**, no a una credencial personal suya. En ninguna superficie puede escribirse
+ni insinuarse que sea nutricionista o licenciado en nutrición, ni atribuírsele matrícula o
+título que no tiene.
+
+Esa separación está codificada, y así es como está hecha:
+
+| Mecanismo | Dónde vive |
+|---|---|
+| **El sujeto gramatical.** El entrenamiento va en primera persona ("armo tu plan", "corrijo", "comparo"); lo nutricional, no ("se define la estrategia nutricional del mes") | `index.html` §2, y la frase que instala la arquitectura está en el `.intro` de "Cómo trabajo" |
+| **El nodo `Person` no toca nutrición.** `jobTitle` sigue siendo "Entrenador", `description` es sólo de entrenamiento, `knowsAbout` no incluye ningún término nutricional y **no hay `hasCredential`** | JSON-LD de `index.html` |
+| **Lo nutricional vive en `Service`**, como ítem del `hasOfferCatalog` de cada modalidad: es algo que el servicio incluye, no una propiedad de la persona | JSON-LD, nodos `#presencial` y `#online` |
+| **La regla escrita para modelos y buscadores** | `llms.txt`, sección Identidad |
+| **La bio conserva el ancla de atribución**: *"Su formación declarada es de instructor de musculación"* | `index.html` §6 |
+
+El sitio **no lleva disclaimers** sobre esto, y es deliberado: la separación se sostiene con
+lenguaje normal y con el modelado semántico, no con advertencias.
+
+### Qué quedó expresamente afuera
+
+- **Patologías y condiciones clínicas.** Diabetes, colon irritable, FODMAP, cetogénica y
+  cualquier otra condición de salud declarada en P2. No entran, y no se agregó ninguna FAQ
+  sanitaria: el sitio no abre capa clínica.
+- **Esteroides y fármacos** (P6). Fuera, sin discusión.
+- **Suplementación.** Ver el bloque de abajo.
+- **Dietas, menús, gramajes y planes alimentarios publicados.** El sitio no publica ninguno.
+- **El descriptor gráfico "Entrenador personal - Nutrición".** La identidad
+  CAVALLAROFITNESS / ENTRENAMIENTO PERSONALIZADO **no cambió** y no vuelve automáticamente por
+  esta decisión. Requiere instrucción propia.
+
+### Suplementación — decisión abierta, no resuelta
+
+Marcos declaró en P6 una *"Guía de suplementación natural"* de ocho ítems que incluye
+*"Dosis y forma de consumo"*. **Esta aprobación no la cubre y no se reincorporó por
+inferencia.**
+
+El sitio hoy **no afirma nada sobre si el servicio la ofrece o no**. Lo único que dice es una
+frase verificable sobre sí mismo: *"el sitio no publica pautas, dosis ni protocolos de
+suplementación"* (`llms.txt`). Se evitó a propósito la afirmación absoluta anterior —"no ofrece
+suplementación"—, que podría dejar de ser verdadera.
+
+**Queda como decisión pendiente del titular.** Si se aprueba, es otra intervención.
+
+### Licenciada en Nutrición — pendiente, y no se anticipa nada
+
+Se informó que existe una Licenciada en Nutrición que autorizó la incorporación del componente.
+**El sitio no la menciona, y no debe mencionarla mientras no estén los datos de abajo.** Nada
+de lo publicado depende de ella: la implementación actual se sostiene sola.
+
+No se inventó ni se anticipó nombre, matrícula, modalidad de intervención ni relación
+contractual. **Tampoco se dejó predeterminado cómo se la modelaría en el JSON-LD**: no se
+asume `provider`, ni `employee`, ni `contributor`, ni ninguna otra relación con los nodos
+`Service`. **El modelado semántico de su vínculo queda pendiente de determinar**, y sólo puede
+decidirse una vez que se conozca su intervención profesional concreta.
+
+Datos necesarios antes de cualquier afirmación pública:
+
+1. Nombre y apellido completos.
+2. Número de matrícula y jurisdicción que la otorgó.
+3. **Autorización escrita de ella misma** para ser nombrada en el sitio. La que hay hoy fue
+   transmitida por terceros y no alcanza.
+4. **Cuál es su intervención real**, en una frase que ella suscriba: elaborar, revisar o
+   recibir derivaciones son tres cosas distintas y se escriben distinto — y cada una implica
+   un modelado semántico diferente.
+5. Si el alumno tiene contacto directo con ella.
+6. Si está incluida en el precio del acompañamiento o se contrata aparte.
+7. Perfil público o sitio, si lo tiene, para el `sameAs`.
+
+Con los puntos 1 a 4 resueltos recién puede decidirse **qué** afirma el sitio y **cómo** se
+modela. Antes de eso, no se escribe.

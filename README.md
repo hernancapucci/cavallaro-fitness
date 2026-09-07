@@ -1,7 +1,7 @@
 # CAVALLARO FITNESS
 
-Sitio de **Marcos Cavallaro**, entrenador. Entrenamiento personalizado, presencial en
-Rosario y online.
+Sitio de **Marcos Cavallaro**, entrenador. Entrenamiento personalizado con seguimiento y
+estrategia nutricional, presencial en Rosario y online.
 
 **URL:** https://marcoscavallaro.com/
 **Hosting:** Vercel, sin build. **Estado:** publicada e indexable desde el 02/09/2026.
@@ -36,9 +36,16 @@ Las reglas que no hay que romper están en `DEPLOY.md` §6.
 
 ## Qué NO dice el sitio, y es deliberado
 
-Nada de nutrición, dietas ni suplementación · nada de rehabilitación ni de patologías ·
-ningún título sin documento · ningún resultado sin acta · ninguna dirección, ninguna
-sede, ningún gimnasio nombrado · ningún precio · ninguna promesa de plazo.
+Ninguna dieta, ningún menú, ningún gramaje · ninguna pauta, dosis ni protocolo de
+suplementación · nada de rehabilitación ni de patologías · ningún título sin documento ·
+ningún resultado sin acta · ninguna dirección, ninguna sede, ningún gimnasio nombrado ·
+ningún precio · ninguna promesa de plazo.
+
+**Sobre la estrategia nutricional.** Desde el 07/09/2026 forma parte del acompañamiento y el
+sitio lo dice en las dos modalidades. Marcos Cavallaro sigue siendo **entrenador**: el sitio
+no le atribuye título, matrícula ni credencial en nutrición, y el componente pertenece al
+servicio, no a la persona. Esa distinción está codificada en el JSON-LD y explicada en
+`DEPLOY.md` §10. No romperla.
 
 ## Reproducir los assets
 
