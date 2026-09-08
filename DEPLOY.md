@@ -259,11 +259,15 @@ suplementación"—, que podría dejar de ser verdadera.
 
 **Queda como decisión pendiente del titular.** Si se aprueba, es otra intervención.
 
-### Licenciada en Nutrición — pendiente, y no se anticipa nada
+### Licenciada en Nutrición — parcialmente resuelto el 2026-09-07 (ver §11)
+
+> **Estado superado en parte.** Lo que sigue describe la situación al 07/09/2026 *antes* de la
+> intervención de §11. Desde §11 el sitio **sí afirma que el componente nutricional está a cargo
+> de una Licenciada en Nutrición matriculada**, de forma genérica y sin identificarla. Todo lo
+> demás de esta subsección —nombre, matrícula, modelado semántico— **sigue vigente y pendiente**.
 
 Se informó que existe una Licenciada en Nutrición que autorizó la incorporación del componente.
-**El sitio no la menciona, y no debe mencionarla mientras no estén los datos de abajo.** Nada
-de lo publicado depende de ella: la implementación actual se sostiene sola.
+**El sitio no la nombra, y no debe nombrarla mientras no estén los datos de abajo.**
 
 No se inventó ni se anticipó nombre, matrícula, modalidad de intervención ni relación
 contractual. **Tampoco se dejó predeterminado cómo se la modelaría en el JSON-LD**: no se
@@ -271,7 +275,7 @@ asume `provider`, ni `employee`, ni `contributor`, ni ninguna otra relación con
 `Service`. **El modelado semántico de su vínculo queda pendiente de determinar**, y sólo puede
 decidirse una vez que se conozca su intervención profesional concreta.
 
-Datos necesarios antes de cualquier afirmación pública:
+Datos necesarios antes de cualquier afirmación pública que la identifique:
 
 1. Nombre y apellido completos.
 2. Número de matrícula y jurisdicción que la otorgó.
@@ -284,5 +288,101 @@ Datos necesarios antes de cualquier afirmación pública:
 6. Si está incluida en el precio del acompañamiento o se contrata aparte.
 7. Perfil público o sitio, si lo tiene, para el `sameAs`.
 
-Con los puntos 1 a 4 resueltos recién puede decidirse **qué** afirma el sitio y **cómo** se
+Con los puntos 1 a 4 resueltos recién puede decidirse **qué más** afirma el sitio y **cómo** se
 modela. Antes de eso, no se escribe.
+
+---
+
+## 11. Corrección de posicionamiento y atribución nutricional (2026-09-07)
+
+Decisión del **titular del servicio**, en el mismo día y como continuación de §10. Dos cambios
+que viajan juntos porque tocan las mismas superficies.
+
+### 11.1 · El fisicoculturismo de competición deja de ser territorio de marca
+
+**Qué se decidió.** El eje de posicionamiento es el **fitness**: cuerpos atléticos y funcionales,
+sostenidos en el tiempo. La preparación para competir **no es oferta, no es target y no es eje**.
+
+**Qué NO se hizo, y es lo importante.** No se borró el antecedente. La regla es la que fijó el
+titular: *la experiencia competitiva histórica puede conservarse como antecedente verificable si
+suma autoridad, pero no como target ni eje de posicionamiento*. El acta del NPC Worldwide
+Argentino es el único resultado del sitio con documento oficial detrás — borrarlo habría costado
+autoridad verificable a cambio de nada.
+
+Lo que cambió es **el encuadre**, no el hecho:
+
+| Antes | Ahora | Dónde |
+|---|---|---|
+| H2: *"Un resultado con acta oficial, y de dónde sale cada dato"* — el resultado competitivo abre la sección | H2: *"Cada dato publicado, con el documento del que sale"* — abre la verificabilidad, que es lo que la sección realmente hace | `index.html` §5 |
+| La aclaración *"no busco alumnos que compitan"* llegaba **después** de la ficha, como descargo | Un `.intro` **antes** de la ficha declara el territorio (fitness) y encuadra lo que sigue como antecedente | `index.html` §5 |
+| `dt` de la ficha: **Competencia** | `dt` de la ficha: **Antecedente** | `index.html` §5 |
+| Bio: *"Preparó al atleta que…"*, sin marco | Bio: *"Su trabajo es fitness… Como antecedente, preparó al atleta que…"* | `index.html` §6 |
+| Sin FAQ sobre el tema | FAQ nueva: *"¿Tengo que querer competir?"* | `index.html` §7 + `FAQPage` |
+
+**Decisión de vocabulario.** La palabra *fisicoculturismo* **no se escribe en ninguna superficie
+visible ni en el JSON-LD**. Aparece sólo en `llms.txt` y en esta documentación, y en los dos
+casos en forma **negativa** (*"no es territorio de marca"*, *"no ofrece preparación para
+competencias"*). Poner el término en un `h3` o en `knowsAbout` habría reforzado por SEO
+exactamente la asociación que esta intervención viene a deshacer. La FAQ se llama *"¿Tengo que
+querer competir?"* por eso, y no de otra manera.
+
+`knowsAbout` suma **"Fitness"** y **"Acondicionamiento físico"** al frente de la lista. No se
+quitó ningún término: hipertrofia, fuerza y desarrollo muscular son fitness, no competición.
+
+### 11.2 · El componente nutricional tiene responsable declarado
+
+**Qué afirma el sitio ahora:** que la estrategia nutricional está **a cargo de una Licenciada en
+Nutrición matriculada**. Nada más que eso.
+
+**Qué sigue sin afirmar, deliberadamente:**
+
+- **Nombre y apellido.** No están.
+- **Matrícula y jurisdicción.** No están.
+- **Vínculo contractual, honorarios, contacto directo con el alumno.** No están.
+- **Modelado en Schema.org.** No hay nodo `Person` para ella, ni `provider`, ni `employee`, ni
+  `contributor`, ni `sameAs`. **La ausencia es deliberada**: el modelado depende de cuál sea su
+  intervención real (elaborar, revisar o recibir derivaciones son tres cosas distintas), y eso
+  todavía no está determinado. Ver §10.
+
+**Dónde vive la afirmación, y por qué ahí.** El componente nutricional sigue viviendo en los
+nodos `Service`, nunca en `Person`. La atribución se agregó como `description` del `Offer`
+nutricional de cada modalidad, con el texto: *"Componente a cargo de una Licenciada en Nutrición
+matriculada. No lo presta Marcos Cavallaro, que es entrenador."* Es decir: la Licenciada
+**refuerza** la regla de atribución de §10 en vez de debilitarla — antes el sitio decía quién
+*no* es Marcos, ahora dice además quién *sí* se ocupa.
+
+**El sujeto gramatical mejora.** §10 resolvía la atribución con impersonales (*"se define la
+estrategia nutricional del mes"*) para no atribuirle nada a Marcos. Ahora hay un sujeto real y
+la prosa puede decirlo: *"y no la llevo yo: está a cargo de una Licenciada en Nutrición
+matriculada"*. El mecanismo de §10 sigue vigente donde no hay dato concreto que sostenga más.
+
+### Superficies tocadas
+
+`index.html` (meta description, OG/Twitter, §2, §3, §4, §5, §6, §7, JSON-LD `WebPage`/`Person`/
+`Service`×2/`FAQPage`) · `llms.txt` (bajada, Identidad, Qué ofrece, Qué NO ofrece, Evidencia,
+Estado) · `README.md` · este archivo.
+
+**No se tocó:** hero, identidad gráfica, paleta, tipografía, tarjeta de contacto, vCard, 404,
+`robots.txt`, `sitemap.xml`, `vercel.json`.
+
+### Riesgo abierto, para que conste
+
+La afirmación *"a cargo de una Licenciada en Nutrición matriculada"* es una afirmación pública
+sobre la intervención profesional de una tercera persona. Es genérica —no la identifica, y por
+eso el riesgo es bajo—, pero **el punto 3 de la lista de §10 sigue sin resolverse**: la
+autorización que hay fue transmitida por terceros, no por ella. La instrucción del titular fue
+explícita y se ejecutó; la autorización escrita de la profesional sigue siendo el papel que
+falta, y hace falta antes de nombrarla.
+
+### 11.3 · Fotografía de sección en "Qué podés trabajar"
+
+Se incorporó `assets/img/entrenamiento-remo.webp` (1440×960, 47 KB) como banda al pie de §3,
+con el tratamiento `.integra` y **sin epígrafe**.
+
+Es una **imagen generada, no documental**, y por eso: va con `.integra` (fotografía que pertenece
+al espacio) y no con la gramática recorte/nota, que está reservada a la fotografía con
+procedencia — el `figcaption` de §5 afirma algo sobre el mundo, y esta imagen no puede afirmar
+nada. El `alt` describe el ejercicio, no a una persona, y no la presenta como alumna.
+
+**No es candidata a hero ni a `og:image`.** Se reemplaza sin tocar nada más el día que haya
+fotografía real de sesión, que es lo que pide el brief de §9.

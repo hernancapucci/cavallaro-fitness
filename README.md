@@ -1,7 +1,8 @@
 # CAVALLARO FITNESS
 
 Sitio de **Marcos Cavallaro**, entrenador. Entrenamiento personalizado con seguimiento y
-estrategia nutricional, presencial en Rosario y online.
+estrategia nutricional, presencial en Rosario y online. El territorio es el **fitness**:
+cuerpos atléticos y funcionales, no la preparación para competir.
 
 **URL:** https://marcoscavallaro.com/
 **Hosting:** Vercel, sin build. **Estado:** publicada e indexable desde el 02/09/2026.
@@ -39,13 +40,23 @@ Las reglas que no hay que romper están en `DEPLOY.md` §6.
 Ninguna dieta, ningún menú, ningún gramaje · ninguna pauta, dosis ni protocolo de
 suplementación · nada de rehabilitación ni de patologías · ningún título sin documento ·
 ningún resultado sin acta · ninguna dirección, ninguna sede, ningún gimnasio nombrado ·
-ningún precio · ninguna promesa de plazo.
+ningún precio · ninguna promesa de plazo · **ningún nombre ni matrícula de la Licenciada en
+Nutrición mientras no estén los datos**.
+
+**Sobre el posicionamiento.** Desde el 07/09/2026 el eje es el fitness. El fisicoculturismo de
+competición **no es territorio de marca ni público objetivo**: el antecedente del NPC Worldwide
+Argentino se conserva porque tiene acta oficial y prueba trabajo técnico, pero está encuadrado
+como antecedente y no como oferta. Ver `DEPLOY.md` §11.
 
 **Sobre la estrategia nutricional.** Desde el 07/09/2026 forma parte del acompañamiento y el
-sitio lo dice en las dos modalidades. Marcos Cavallaro sigue siendo **entrenador**: el sitio
-no le atribuye título, matrícula ni credencial en nutrición, y el componente pertenece al
-servicio, no a la persona. Esa distinción está codificada en el JSON-LD y explicada en
-`DEPLOY.md` §10. No romperla.
+sitio lo dice en las dos modalidades, **a cargo de una Licenciada en Nutrición matriculada**.
+Marcos Cavallaro sigue siendo **entrenador**: el sitio no le atribuye título, matrícula ni
+credencial en nutrición, y el componente pertenece al servicio, no a la persona. Esa distinción
+está codificada en el JSON-LD y explicada en `DEPLOY.md` §10. No romperla.
+
+La Licenciada **no está identificada ni modelada en el JSON-LD** —sin nombre, sin matrícula, sin
+`Person`, sin `provider`— y esa ausencia es deliberada. Los datos que faltan antes de nombrarla
+están en `DEPLOY.md` §10. No completarlos por inferencia.
 
 ## Reproducir los assets
 
