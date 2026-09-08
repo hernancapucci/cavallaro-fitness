@@ -142,6 +142,18 @@ h2.st{font-size:24px;font-weight:700;letter-spacing:-.03em;line-height:1.08;
 .marg{font-size:12.5px;color:var(--sec);line-height:1.65;border-left:1px solid var(--sec);
   padding-left:14px;max-width:26em;margin-top:24px}
 
+/* ═══ mobile · la banda recorta en vez de encoger ═══════════════════════
+   A 335px de ancho la 3:2 original deja la figura diminuta. El contenedor
+   toma una proporción más vertical y la fotografía la cubre: se conserva la
+   relación de aspecto intrínseca y se pierde fondo por los laterales, nunca
+   se deforma. La ventana visible es el 53,3% del ancho (0.8/1.5); con
+   object-position 13.5% arranca en el 6% —la mancuerna— y termina en el 60%
+   —el rostro—, que es la información que tiene que sobrevivir. */
+@media (max-width:639px){
+  .banda{aspect-ratio:4/5}
+  .banda img{height:100%;object-fit:cover;object-position:13.5% center}
+}
+
 /* ═══ 4 · PRESENCIAL U ONLINE ═══ */
 .dos{display:grid;grid-template-columns:1fr;gap:32px}
 .col{border-top:1.5px solid var(--txt);padding-top:16px}
