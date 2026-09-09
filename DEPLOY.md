@@ -467,8 +467,9 @@ sigue intacta: el componente pertenece al servicio, nunca a la `Person`.
 
 ### 12.4 · Fotografía: registro reemplaza al disco, y cambia de plano
 
-`recorte-disco.webp` (180 × 180) se reemplaza por **`registro-cuaderno.webp` (1000 × 1000, 56 KB)**,
-generado desde el original de 1254 × 1254.
+`recorte-disco.webp` (180 × 180) se reemplaza por **`registro-cuaderno.webp` (1000 × 1000, 62 KB)**.
+El original, de 1239 × 1269, se recorta al centro a 1239 × 1239 —15 px arriba y 15 px abajo, 1,2 %
+por lado— para entrar en el slot cuadrado sin deformar, y recién ahí se remuestrea.
 
 Es **imagen generada, no documental**, igual que la de §3. Pero a diferencia de aquélla conserva
 la gramática `.recorte`/`.nota` —filete y número invertido— porque ocupa el lugar estructural de

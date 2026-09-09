@@ -80,7 +80,14 @@ h2.st{font-size:24px;font-weight:700;letter-spacing:-.03em;line-height:1.08;
 .gram{display:flex;gap:14px;align-items:flex-start}
 .banda{margin-top:30px}
 .banda picture{display:block}
-.banda img{width:100%;height:auto}
+/* La proporción de cada rama viaja por CSS, no por los atributos del <source>:
+   WebKit no siempre los aplica, y con object-fit en su valor inicial (fill) una
+   caja 3:2 con una imagen 4:5 adentro no recorta — estira, 1,875x. Los
+   breakpoints son los mismos que el media del <source>: no pueden desfasarse.
+   cover es la red: si alguna vez hubiera discrepancia, recorta en vez de deformar. */
+.banda img{width:100%;height:auto;object-fit:cover}
+@media (max-width:639px){ .banda img{aspect-ratio:1120/1400} }
+@media (min-width:640px){ .banda img{aspect-ratio:1440/960} }
 .recorte{position:relative;flex:0 0 auto;width:118px;height:118px;
   border:1px solid rgba(255,255,255,.85);background:var(--fondo)}
 .papel .recorte{border-color:var(--txt-p)}
