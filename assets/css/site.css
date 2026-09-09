@@ -162,7 +162,12 @@ h2.st{font-size:24px;font-weight:700;letter-spacing:-.03em;line-height:1.08;
   text-transform:uppercase;color:var(--sec-p);margin-bottom:1px}
 .fila .p{font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
   text-align:right;color:var(--sec-p);font-variant-numeric:tabular-nums;white-space:nowrap}
-.evid-gram{margin-top:26px}
+/* La fotografía de §5 es representación central del trabajo, no evidencia
+   auxiliar: ocupa el ancho de su columna y la nota baja debajo. La gramática
+   —filete, 01 invertido, nota— no cambia; cambia el plano. */
+.evid-gram{display:block;margin-top:26px}
+.evid-gram .recorte{width:100%;height:auto;max-width:420px;aspect-ratio:1/1}
+.evid-gram .nota{margin-top:14px;max-width:420px}
 .reserv{border:1px dashed #C4C4BE;padding:18px 20px;color:var(--sec-p);font-size:12.5px;
   line-height:1.6;max-width:34em;margin-top:26px}
 .reserv b{color:var(--txt-p)}
@@ -210,6 +215,7 @@ blockquote cite{display:block;font-style:normal;font-size:11px;letter-spacing:.1
   :root{--pad:16px}
   .gram{gap:11px}
   .recorte{width:104px;height:104px}
+  .evid-gram .recorte{width:100%;height:auto}
   .nota{grid-template-columns:22px 1fr;gap:9px}
   .hero h1 .serv{font-size:30px}
   .hero .dif{font-size:17px}
@@ -263,7 +269,8 @@ blockquote cite{display:block;font-style:normal;font-size:11px;letter-spacing:.1
   .item p{font-size:14px}
   .evid{display:grid;grid-template-columns:1fr 400px;gap:52px;align-items:start}
   .evid-gram{margin-top:0}
-  .papel .recorte{width:168px;height:168px}
+  .papel .evid-gram .recorte{width:100%;height:auto;max-width:none}
+  .evid-gram .nota{max-width:none}
   .contacto h2{font-size:38px}
   .contacto .cta{display:inline-block;padding:18px 30px;font-size:16px}
 }

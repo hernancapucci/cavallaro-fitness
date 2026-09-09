@@ -2,7 +2,7 @@
 
 Sitio de **Marcos Cavallaro**, entrenador. Entrenamiento personalizado con seguimiento y
 estrategia nutricional, presencial en Rosario y online. El territorio es el **fitness**:
-cuerpos atléticos y funcionales, no la preparación para competir.
+fuerza, hipertrofia y técnica, para cuerpos atléticos y funcionales sostenidos en el tiempo.
 
 **URL:** https://marcoscavallaro.com/
 **Hosting:** Vercel, sin build. **Estado:** publicada e indexable desde el 02/09/2026.
@@ -43,10 +43,11 @@ ningún resultado sin acta · ninguna dirección, ninguna sede, ningún gimnasio
 ningún precio · ninguna promesa de plazo · **ningún nombre ni matrícula de la Licenciada en
 Nutrición mientras no estén los datos**.
 
-**Sobre el posicionamiento.** Desde el 07/09/2026 el eje es el fitness. El fisicoculturismo de
-competición **no es territorio de marca ni público objetivo**: el antecedente del NPC Worldwide
-Argentino se conserva porque tiene acta oficial y prueba trabajo técnico, pero está encuadrado
-como antecedente y no como oferta. Ver `DEPLOY.md` §11.
+**Sobre el posicionamiento.** El eje es el fitness y **se expresa únicamente en positivo**:
+fuerza, hipertrofia, técnica, progresión y continuidad. Desde el 08/09/2026 ninguna superficie
+pública —visible, JSON-LD, FAQ o `llms.txt`— nombra el territorio competitivo, ni siquiera para
+negarlo. La única excepción es una directiva de desambiguación en `llms.txt`, dirigida a
+modelos. Ver `DEPLOY.md` §12.
 
 **Sobre la estrategia nutricional.** Desde el 07/09/2026 forma parte del acompañamiento y el
 sitio lo dice en las dos modalidades, **a cargo de una Licenciada en Nutrición matriculada**.

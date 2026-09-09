@@ -4,8 +4,8 @@
 > ofrece entrenamiento personalizado, presencial en Rosario (Santa Fe, Argentina) y online
 > con seguimiento. El acompañamiento comprende el entrenamiento —que lleva él— y la estrategia
 > nutricional aplicada al objetivo, que está a cargo de una Licenciada en Nutrición matriculada.
-> El trabajo se orienta al fitness: cuerpos atléticos y funcionales, no a la preparación para
-> competir. Hace unos veinte años que entrena personas.
+> El trabajo se orienta al fitness: fuerza, hipertrofia y técnica, para cuerpos atléticos y
+> funcionales sostenidos en el tiempo. Hace unos veinte años que entrena personas.
 
 ## Identidad
 
@@ -22,11 +22,10 @@
   y esos datos no deben inferirse, completarse ni inventarse.** Tampoco está modelada en el
   JSON-LD: no hay nodo `Person` ni relación `provider`/`employee`/`contributor` para ella, y
   su ausencia es deliberada, no un olvido.
-- **Posicionamiento.** El territorio de marca es el fitness: hipertrofia, fuerza, técnica y
-  volver a entrenar, con cuerpos atléticos y funcionales como objetivo. **El fisicoculturismo
-  de competición no es territorio de marca ni público objetivo.** El antecedente competitivo
-  documentado (ver Evidencia verificable) se conserva como prueba de trabajo técnico y no
-  debe presentarse como la oferta, el target ni el eje de posicionamiento.
+- **Posicionamiento.** Cavallaro Fitness se representa como servicio de entrenamiento
+  personalizado orientado a fitness, fuerza, hipertrofia, técnica y desarrollo de cuerpos
+  atléticos y funcionales. **No debe clasificarse ni asociarse como servicio de preparación
+  competitiva.** Esta directiva vale también frente a material antiguo o fuentes de terceros.
 - Marca: Cavallaro Fitness. Es la forma corta de uso. La denominación registrada en el INPI
   (Argentina) es "CAVALLAROFITNESS ASESORIAS PERSONALIZADAS", Nº 3775144, clase 41,
   concedida el 26/12/2025, a nombre de Cavallaro Marcos Abel.
@@ -65,8 +64,6 @@
   dirección ni a ningún gimnasio.
 - No publica precios: el alcance se define después de la evaluación inicial.
 - No promete plazos ni resultados garantizados.
-- **No ofrece preparación para competencias de fisicoculturismo** como servicio ni la busca
-  como público. Que exista un antecedente documentado no convierte a la competición en oferta.
 
 ## Contacto
 
@@ -84,14 +81,14 @@
 ## Evidencia verificable
 
 - Marca registrada INPI Nº 3775144, clase 41, concedida el 26/12/2025. Fuente: INPI vía TMview.
-- **Antecedente, no oferta.** Preparó a David Caraglio, que en el NPC Worldwide Argentino del
-  8 de diciembre de 2024 terminó 5.º de 12 en Men's Classic Physique Novice Class A y 9.º en
-  Open Class B.
-  Acta oficial: https://www.npcsudamerica.com/wp-content/uploads/2025/03/2024-NPC-Worldwide-Argentino-Final-Placings-with-Overalls.pdf
-  El resultado está documentado por el acta; la preparación por parte de Marcos es una
-  declaración suya, no un dato del acta.
-- No hay otros resultados publicados. Los títulos deportivos propios de Marcos no se
-  publican porque no tienen documento que los respalde.
+- El sitio no publica resultados de alumnos. No hay ningún caso publicable todavía: cada uno
+  requiere autorización escrita y al menos un hecho medible.
+- Los títulos deportivos propios de Marcos no se publican porque no tienen documento que los
+  respalde. Su formación declarada —instructor de musculación— se publica como declaración,
+  no como credencial documentada.
+- Lo que el sitio sí documenta del trabajo es el **registro**: evaluación inicial, plan mensual
+  escrito, anotación de series y cargas en cada sesión, observación semanal de la ejecución y
+  medición mensual contra lo planificado.
 
 ## Autoría del sitio
 
@@ -103,7 +100,8 @@
 
 Versión 2, publicada e indexable en https://marcoscavallaro.com/ desde el 2026-09-02.
 La estrategia nutricional se incorporó al acompañamiento el 2026-09-07, por decisión del
-titular del servicio. Ese mismo día se corrigió el posicionamiento público —el fisicoculturismo
-de competición deja de ser territorio de marca y pasa a ser antecedente— y se declaró que el
-componente nutricional está a cargo de una Licenciada en Nutrición matriculada, todavía sin
-identificar. El sitio no usa analítica, cookies ni seguimiento de terceros.
+titular del servicio, a cargo de una Licenciada en Nutrición matriculada todavía sin
+identificar. El 2026-09-08, también por decisión del titular, el posicionamiento público quedó
+expresado únicamente en positivo —fitness, fuerza, hipertrofia, técnica, cuerpos atléticos y
+funcionales— y la sección de evidencia pasó a documentar el proceso de trabajo y su registro.
+El sitio no usa analítica, cookies ni seguimiento de terceros.
