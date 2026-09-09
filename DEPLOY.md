@@ -530,3 +530,71 @@ eliminar toda referencia y todo enlace desde acá; no podemos despublicarlo ni d
 **No se tocó:** hero, identidad, paleta, tipografía, tarjeta, vCard, 404, `robots.txt`,
 `sitemap.xml`, `vercel.json`, §2, §4, §8, la fotografía de §3 con su `<picture>`, ni la capa de
 atribución nutricional resuelta el 07/09. `site.css` **no requirió un solo cambio**.
+
+---
+
+## 13. Favicon: el set vigente y por qué el color cambia con el tamaño (2026-09-09)
+
+**El problema.** Google Search Console mostraba el globo genérico. El sitio declaraba un único
+`rel="icon"` y era **SVG**, formato que Google **no admite** para el favicon de Search —acepta BMP,
+GIF, ICO, PNG, JPEG, PPM y TIFF—, y `/favicon.ico` respondía 404. Entre las dos cosas, el
+rastreador se quedaba sin un icono utilizable. Crawlabilidad nunca fue el problema: `robots.txt`
+es `Allow: /`.
+
+### 13.1 · Set vigente
+
+| Archivo | Tamaño | Color | Consumidor |
+|---|---|---|---|
+| `/favicon.ico` | 16 · 32 · 48 en un solo archivo | **blanco** | Google, navegadores viejos, fallback por ruta |
+| `assets/img/favicon-96.png` | 96 | **blanco** | Google Search |
+| `assets/img/favicon.svg` | vectorial | **blanco** | navegadores modernos |
+| `assets/img/apple-touch-icon.png` | 180 | **ámbar #C97B10** | pantalla de inicio de iOS |
+
+```html
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="/assets/img/favicon-96.png" type="image/png" sizes="96x96">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+```
+
+Idéntico en `index.html`, `tarjeta/index.html` y `404.html`, con rutas absolutas desde la raíz.
+Las relativas que había antes funcionaban, pero hacían imposible declarar `/favicon.ico`.
+
+### 13.2 · El color cambia con el tamaño, y es deliberado
+
+**No unificar esto.** El ámbar sobre `#0B0B0C` da **5,92:1** de contraste; el blanco, **19,67:1**.
+A 16 px la contraforma de la C se cierra y el monograma se vuelve una mancha naranja: deja de
+reconocerse. La regla es **donde el icono se ve chico, manda la legibilidad**; el ámbar queda para
+la única superficie que lo muestra grande.
+
+Por eso el **SVG va en blanco** aunque sea vectorial: los navegadores lo prefieren sobre el ICO
+cuando está declarado, y lo rasterizan a 16 px para la pestaña. Un SVG ámbar habría devuelto la
+mancha en la superficie más vista. Lo mismo con el PNG de 96: Google lo reduce al tamaño del
+resultado.
+
+### 13.3 · Geometría
+
+**`ancho 0,78 · radio 56`** sobre la caja de 512, contra el `0,66 / 112,6` anterior. La versión
+vieja gastaba caja en aire y en esquinas que a 16 px se comen tres píxeles por lado. Mejora en los
+cuatro tamaños y en los dos colores. **El símbolo no se rediseñó**: es el CF de la geometría
+maestra, sólo cambió cuánto ocupa dentro del cuadrado.
+
+Todo sale de `~/CAVALLARO FITNESS/06-IMPLEMENTACION/assets.py`, que emite el SVG desde `cf.py` y
+rasteriza cada PNG con Chrome al tamaño exacto. **Nada se editó a mano.** El ICO se arma
+empaquetando los tres rasters; la imagen base tiene que ser la mayor, porque Pillow reduce desde
+ella pero nunca amplía —con la de 16 px como base el ICO sale con un solo tamaño—.
+
+### 13.4 · Sin webmanifest, y sin `icon-512.png`
+
+**No se agregó webmanifest** y no debe agregarse sin una necesidad real: el sitio no tiene
+JavaScript, service worker ni ambición de PWA.
+
+`icon-512.png` **se retiró**. No tenía una sola referencia en el repo, el generador dejó de
+emitirlo, y su único consumidor posible habría sido ese webmanifest que no existe. Git conserva
+el archivo en la historia.
+
+### 13.5 · Qué esperar
+
+Google tarda **de varios días a varias semanas** en recrawlear un favicon. Que Search Console siga
+mostrando el genérico durante un tiempo después de publicar no significa que la corrección haya
+fallado. La URL del favicon **debe mantenerse estable**: no renombrar estos archivos.
