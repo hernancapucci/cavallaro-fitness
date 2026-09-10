@@ -74,17 +74,14 @@
 ## Páginas
 
 - [Sitio principal](https://marcoscavallaro.com/): quién es, cómo
-  trabaja, qué se puede trabajar, modalidades, resultados, trayectoria, preguntas y contacto.
+  trabaja, qué se puede trabajar, modalidades, registro, trayectoria, preguntas y contacto.
 - [Tarjeta de contacto](https://marcoscavallaro.com/tarjeta/): datos
   de contacto y archivo vCard.
 
 ## Evidencia verificable
 
 - Marca registrada INPI Nº 3775144, clase 41, concedida el 26/12/2025. Fuente: INPI vía TMview.
-- El sitio no publica resultados de alumnos. No hay ningún caso publicable todavía: cada uno
-  requiere autorización escrita y al menos un hecho medible.
-- Los títulos deportivos propios de Marcos no se publican porque no tienen documento que los
-  respalde. Su formación declarada —instructor de musculación— se publica como declaración,
+- La formación declarada de Marcos —instructor de musculación— se publica como declaración,
   no como credencial documentada.
 - Lo que el sitio sí documenta del trabajo es el **registro**: evaluación inicial, plan mensual
   escrito, anotación de series y cargas en cada sesión, observación semanal de la ejecución y

@@ -598,3 +598,83 @@ el archivo en la historia.
 Google tarda **de varios días a varias semanas** en recrawlear un favicon. Que Search Console siga
 mostrando el genérico durante un tiempo después de publicar no significa que la corrección haya
 fallado. La URL del favicon **debe mantenerse estable**: no renombrar estos archivos.
+
+---
+
+## 14. Corrección editorial: gobernanza fuera de la superficie, y un hecho falso (2026-09-10)
+
+Marcos revisó el sitio publicado y detectó dos errores. Los dos son de contenido, no de diseño:
+nada de esta sección toca CSS de composición, imágenes ni responsive.
+
+### 14.1 · La regla de casos de alumnos es interna, y desde hoy vive únicamente acá
+
+**La regla.** Ningún caso de alumno se publica sin **autorización escrita** del alumno y **al
+menos un hecho medible**. No se sustituye por testimonios. **Esta regla no se enuncia
+públicamente**: no va en el HTML visible, ni en `llms.txt`, ni en ninguna otra superficie servida.
+
+**Por qué.** Estaba publicada en dos lugares —un `<p class="reserv">` con borde punteado al cierre
+de §5, y un bullet de "Evidencia verificable" en `llms.txt`— y las dos versiones hacían lo mismo:
+explicarle al visitante (y a los modelos) una política editorial interna, y de paso anunciarle una
+carencia que no había preguntado. El borde punteado agravaba el problema: no se leía como nota al
+pie sino como sección reservada.
+
+**Alcance de la eliminación.** No queda en superficie pública **ninguna referencia a la
+inexistencia actual de casos o resultados de alumnos**, ni siquiera formulada como hecho neutro
+sobre el sitio. La ausencia no se comunica: simplemente no hay bloque.
+
+### 14.2 · "Títulos deportivos propios" era un residuo del territorio competitivo
+
+`llms.txt` decía que los títulos deportivos propios de Marcos no se publican por falta de
+documento. Eran dos problemas en una línea: gobernanza publicada, y —peor— un antecedente
+competitivo sobreviviendo en negativo en el único archivo escrito para que los modelos lo lean,
+dos días después de que §12 lo retirara de todas las demás superficies. Eliminado.
+
+Sobrevive sólo la formulación legítima, que es un hecho sobre cómo se publica la formación:
+*"La formación declarada de Marcos —instructor de musculación— se publica como declaración, no
+como credencial documentada."*
+
+**Vale como precedente:** cuando se retira un territorio de la superficie pública, `llms.txt` hay
+que barrerlo con el mismo criterio que el HTML. Que su destinatario sea una máquina no lo vuelve
+documentación interna.
+
+### 14.3 · Marcos no entrena a una persona por vez
+
+§6 afirmaba: *"Entrena a una persona por vez y evalúa a cada una antes de darle un plan."* La
+declaración de Marcos es que **casi nunca** entrena a una persona por vez, y que la
+individualidad de la sesión es a convenir. La primera mitad de la oración era falsa.
+
+Quedó: **"Evalúa a cada persona antes de darle un plan."** Seis palabras menos, ninguna nueva.
+
+**Lo que deliberadamente NO se hizo.** No se agregó ninguna explicación sobre modalidad grupal,
+individual, 1:1 ni "a convenir". Publicar que la sesión no siempre es individual le abre al
+visitante una pregunta que hoy no se hace e insinúa una oferta grupal que no existe; y "a
+convenir" es término de negociación, no de copy. Si alguna vez el sitio dice algo sobre esto,
+tiene que ser una decisión explícita, no el residuo de una corrección.
+
+**Lo que sigue siendo cierto y no se tocó.** "Entrenamiento personalizado" aparece en trece
+superficies —hero, meta, `robots.txt`, `llms.txt`, tarjeta, `.vcf`, `Person` y ambos `Service`—
+y en todas califica al **plan**, no a la sesión. No es una afirmación de exclusividad y no hay
+que corregirla.
+
+### 14.4 · Copy que roza la gobernanza y se queda
+
+El barrido separó dos cosas que se parecen. Se conserva, porque está dirigido al visitante y
+argumenta algo:
+
+- **§5, párrafo de cierre.** *"cada dato publicado tiene atrás un documento, o dice que es una
+  declaración"* + INPI + formación declarada. Es la prueba de que la sección sobre registrar lo
+  que pasa se aplica a sí misma, y lleva el dato duro de la marca.
+- **§6.** *"Su formación declarada es de instructor de musculación."* La precisión es honesta,
+  no burocrática.
+- **FAQ "¿Cuánto sale?"** Responde una pregunta real.
+- **§4, las dos listas de modalidad.** No afirman exclusividad.
+
+### Superficies tocadas
+
+| Archivo | Cambio |
+|---|---|
+| `index.html` | eliminado el `<p class="reserv">` de §5; corregida la oración de §6 |
+| `assets/css/site.css` | eliminadas `.reserv` y `.reserv b`, ya sin consumidor |
+| `llms.txt` | eliminado el bullet de casos; eliminada la oración de títulos deportivos; "resultados" → "registro" en la descripción del sitio principal |
+| `README.md` | eliminado *"ningún resultado sin acta"* de la lista de lo que el sitio no dice: *acta* era vocabulario de la etapa competitiva, y la regla vigente de casos vive sólo acá. GitHub también es superficie de existencia digital aunque Vercel no lo publique |
+| `DEPLOY.md` | esta sección |

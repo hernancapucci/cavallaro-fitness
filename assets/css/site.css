@@ -175,9 +175,6 @@ h2.st{font-size:24px;font-weight:700;letter-spacing:-.03em;line-height:1.08;
 .evid-gram{display:block;margin-top:26px}
 .evid-gram .recorte{width:100%;height:auto;max-width:420px;aspect-ratio:1/1}
 .evid-gram .nota{margin-top:14px;max-width:420px}
-.reserv{border:1px dashed #C4C4BE;padding:18px 20px;color:var(--sec-p);font-size:12.5px;
-  line-height:1.6;max-width:34em;margin-top:26px}
-.reserv b{color:var(--txt-p)}
 
 /* ═══ 6 · MARCOS ═══ */
 .marcos{border-top:1px solid var(--linea);padding:44px 0}

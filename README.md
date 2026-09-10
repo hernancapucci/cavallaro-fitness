@@ -39,9 +39,9 @@ Las reglas que no hay que romper están en `DEPLOY.md` §6.
 
 Ninguna dieta, ningún menú, ningún gramaje · ninguna pauta, dosis ni protocolo de
 suplementación · nada de rehabilitación ni de patologías · ningún título sin documento ·
-ningún resultado sin acta · ninguna dirección, ninguna sede, ningún gimnasio nombrado ·
-ningún precio · ninguna promesa de plazo · **ningún nombre ni matrícula de la Licenciada en
-Nutrición mientras no estén los datos**.
+ninguna dirección, ninguna sede, ningún gimnasio nombrado · ningún precio · ninguna promesa
+de plazo · **ningún nombre ni matrícula de la Licenciada en Nutrición mientras no estén los
+datos**.
 
 **Sobre el posicionamiento.** El eje es el fitness y **se expresa únicamente en positivo**:
 fuerza, hipertrofia, técnica, progresión y continuidad. Desde el 08/09/2026 ninguna superficie
