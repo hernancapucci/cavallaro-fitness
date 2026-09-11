@@ -169,12 +169,18 @@ h2.st{font-size:24px;font-weight:700;letter-spacing:-.03em;line-height:1.08;
   text-transform:uppercase;color:var(--sec-p);margin-bottom:1px}
 .fila .p{font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
   text-align:right;color:var(--sec-p);font-variant-numeric:tabular-nums;white-space:nowrap}
-/* La fotografía de §5 es representación central del trabajo, no evidencia
-   auxiliar: ocupa el ancho de su columna y la nota baja debajo. La gramática
-   —filete, 01 invertido, nota— no cambia; cambia el plano. */
-.evid-gram{display:block;margin-top:26px}
-.evid-gram .recorte{width:100%;height:auto;max-width:420px;aspect-ratio:1/1}
-.evid-gram .nota{margin-top:14px;max-width:420px}
+/* La fotografía de §5 no es evidencia auxiliar: es el primer movimiento de la
+   sección. Fotografía, 01, nota y ficha comparten una única medida editorial de
+   760 px y un solo eje —ya no hay dos columnas—, así que la imagen deja de
+   flotar dentro de una superficie enorme y §5 se lee como una columna. La
+   proporción es la nativa del original, 1239x1269: no hay recorte. La gramática
+   —filete, 01 invertido, nota— no cambia; cambia el plano. Los selectores van
+   prefijados con #resultados porque tienen que ganarle a .papel .evid-gram. */
+#resultados .evid{display:block}
+.evid-gram{display:block;margin:0 0 34px}
+#resultados .evid-gram .recorte{width:100%;height:auto;max-width:760px;aspect-ratio:1239/1269}
+#resultados .evid-gram .nota{margin-top:14px;max-width:760px}
+#resultados .ficha,#resultados .sep-s{max-width:760px}
 
 /* ═══ 6 · MARCOS ═══ */
 .marcos{border-top:1px solid var(--linea);padding:44px 0}
@@ -219,7 +225,6 @@ blockquote cite{display:block;font-style:normal;font-size:11px;letter-spacing:.1
   :root{--pad:16px}
   .gram{gap:11px}
   .recorte{width:104px;height:104px}
-  .evid-gram .recorte{width:100%;height:auto}
   .nota{grid-template-columns:22px 1fr;gap:9px}
   .hero h1 .serv{font-size:30px}
   .hero .dif{font-size:17px}
@@ -271,10 +276,6 @@ blockquote cite{display:block;font-style:normal;font-size:11px;letter-spacing:.1
   .met h2{margin-bottom:16px}
   .ciclo{margin-left:-20px;padding-left:20px}
   .item p{font-size:14px}
-  .evid{display:grid;grid-template-columns:1fr 400px;gap:52px;align-items:start}
-  .evid-gram{margin-top:0}
-  .papel .evid-gram .recorte{width:100%;height:auto;max-width:none}
-  .evid-gram .nota{max-width:none}
   .contacto h2{font-size:38px}
   .contacto .cta{display:inline-block;padding:18px 30px;font-size:16px}
 }

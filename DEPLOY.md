@@ -467,6 +467,10 @@ sigue intacta: el componente pertenece al servicio, nunca a la `Person`.
 
 ### 12.4 · Fotografía: registro reemplaza al disco, y cambia de plano
 
+> **Superada el 2026-09-11 por §15.** La composición 59/41, el slot cuadrado de 400 px, el
+> recorte 1:1 y el asset de 1000 × 1000 que se describen abajo ya no existen. Lo que sigue
+> vale como registro de por qué se llegó hasta ahí, no como descripción del estado vigente.
+
 `recorte-disco.webp` (180 × 180) se reemplaza por **`registro-cuaderno.webp` (1000 × 1000, 62 KB)**.
 El original, de 1239 × 1269, se recorta al centro a 1239 × 1239 —15 px arriba y 15 px abajo, 1,2 %
 por lado— para entrar en el slot cuadrado sin deformar, y recién ahí se remuestrea.
@@ -678,3 +682,98 @@ argumenta algo:
 | `llms.txt` | eliminado el bullet de casos; eliminada la oración de títulos deportivos; "resultados" → "registro" en la descripción del sitio principal |
 | `README.md` | eliminado *"ningún resultado sin acta"* de la lista de lo que el sitio no dice: *acta* era vocabulario de la etapa competitiva, y la regla vigente de casos vive sólo acá. GitHub también es superficie de existencia digital aunque Vercel no lo publique |
 | `DEPLOY.md` | esta sección |
+
+---
+
+## 15. §5 pasa a columna editorial única de 760 px (2026-09-11)
+
+§12.4 agrandó la fotografía dentro de la composición que ya existía, y no alcanzó: a 400 px la
+escena seguía sin leerse. La fotografía necesita que se recorra **cuerpo → brazo → mano** para
+decir lo que dice, y a ese tamaño la distribución de luminancia del original —cuerpo en 52/255,
+mano en 122/255— hacía que el cuerpo se perdiera. Ampliar dentro de la grilla no era el camino:
+el problema no era el tamaño, era que la imagen flotaba dentro de una superficie enorme.
+
+### 15.1 · La geometría
+
+**Desaparece la composición 59/41.** §5 pasa a una sola columna: **fotografía → `01` → nota →
+ficha → párrafo de cierre**, todas las piezas con la misma medida y el mismo eje.
+
+| vw | fotografía | img interna | nota | ficha | eje izq | densidad |
+|---|---|---|---|---|---|---|
+| 320 | 288 × 295 | 286 × 293 | 288 | 288 | 16 | 4,33× |
+| 375 | 335 × 343 | 333 × 341 | 335 | 335 | 20 | 3,72× |
+| 390 | 350 × 358 | 348 × 356 | 350 | 350 | 20 | 3,56× |
+| 640 | 576 × 590 | 574 × 588 | 576 | 576 | 32 | 2,16× |
+| 844 | **760 × 778** | 758 × 776 | 760 | 760 | 32 | 1,63× |
+| 999 | 760 × 778 | 758 × 776 | 760 | 760 | 32 | 1,63× |
+| 1280 | 760 × 778 | 758 × 776 | 760 | 760 | 124 | 1,63× |
+| 1440 | 760 × 778 | 758 × 776 | 760 | 760 | 204 | 1,63× |
+
+Sin scroll horizontal en ninguna. El tope entra a 844 px y no se mueve: una sola regla de
+crecimiento desde mobile portrait hasta 1440, sin saltos. §5 pasa de 1152 a **1740 px** de alto.
+
+**El desbalance de 640–999 se resuelve solo, y no por centrar nada.** A 999 px sobran 207 px a la
+derecha, pero los tienen las tres piezas por igual: se lee como columna, no como imagen
+desamparada. Ése era el segundo problema abierto y desaparece por estructura.
+
+**Se descartó la variante A** —fotografía al ancho completo del bloque, 1032 × 1057—. Convertía §5
+en una sección fotográfica con una tabla debajo, subía la altura a 2161 px, la ponía por encima de
+la banda de §3 (que es el plano mayor del sitio) y, con un original de 1239 px, sólo alcanzaba
+1,20× de densidad: se habría visto más blanda que la fotografía de referencia.
+
+### 15.2 · El asset vuelve a su proporción nativa
+
+`registro-cuaderno.webp` se regenera desde la misma fuente aprobada —sha `dd6b2d7d4072a3c1`—
+**sin crop y sin resize**: la fuente de 1239 × 1269 se codifica tal cual, q80 method 6.
+
+| | Antes | Ahora |
+|---|---|---|
+| dimensiones | 1000 × 1000 (recorte 1:1) | **1239 × 1269** (nativa) |
+| bytes | 63.876 | **87.692** |
+| sha | — | `54ff0c765f2061d6` |
+| mostrada ÷ nativa | 0,40 / 0,35 | **0,61 / 0,28** |
+
+El recorte 1:1 nunca fue la causa del problema —se comprobó que quitaba 2,36 % del alto— pero al
+rehacer el plano no había razón para conservar una transformación que no aportaba nada. La
+verificación de que no hubo transformación espacial es píxel a píxel contra el PNG fuente:
+diferencia media **1,44/255**, que es cuantización de WebP y nada más.
+
+**Densidad 1,63× en escritorio**, por encima de la banda de §3 (1,40×).
+
+**Diferencia sub-píxel, aceptada por el titular.** El `aspect-ratio:1239/1269` se aplica a la caja
+de borde (760 × 778) y el filete de 1 px deja el contenido en 758 × 776, un 0,045 % fuera de la
+proporción nativa; `object-fit:cover` recorta **0,35 px** de alto. Es inevitable sin sacar el
+filete, que es gramática. **No tocar para "corregirlo".**
+
+### 15.3 · CSS
+
+Cinco reglas, prefijadas con `#resultados` porque tienen que ganarle a `.papel .evid-gram`:
+
+```css
+#resultados .evid{display:block}
+.evid-gram{display:block;margin:0 0 34px}
+#resultados .evid-gram .recorte{width:100%;height:auto;max-width:760px;aspect-ratio:1239/1269}
+#resultados .evid-gram .nota{margin-top:14px;max-width:760px}
+#resultados .ficha,#resultados .sep-s{max-width:760px}
+```
+
+**Eliminadas por quedar muertas:** en `@media (max-width:359px)`, la neutralización
+`.evid-gram .recorte{width:100%;height:auto}` —`#resultados .evid-gram .recorte` (1,1,1) le gana a
+`.recorte` (0,1,0) con media query o sin ella—; y en `@media (min-width:1000px)`, las cuatro reglas
+de la composición 59/41 completa.
+
+En el HTML, el `<figure class="gram evid-gram">` pasa a ser el primer hijo de `.evid` —13 líneas
+movidas, sin una palabra cambiada— y el `<img>` actualiza `width`/`height` a 1239/1269.
+
+La ficha pasa de 580 a 760 px y **gana** legibilidad: *Punto de partida* y *Lo que pasó* bajan a
+una sola línea. El territorio claro/papel, los textos, el filete, los dos `01` y la nota quedan
+intactos.
+
+### Superficies tocadas
+
+| Archivo | Cambio |
+|---|---|
+| `index.html` | la figura pasa a primer hijo de `.evid`; `width`/`height` del `<img>` a 1239/1269 |
+| `assets/css/site.css` | cinco reglas nuevas; eliminadas la neutralización de 359 px y las cuatro de la grilla de escritorio |
+| `assets/img/registro-cuaderno.webp` | regenerado en proporción nativa, sin crop ni resize |
+| `DEPLOY.md` | esta sección; §12.4 marcada como superada |
