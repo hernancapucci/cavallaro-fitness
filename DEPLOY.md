@@ -152,7 +152,7 @@ pantalla completa. V3.2 quedó aprobada como dirección y este commit la extiend
 |---|---|---|---|---|
 | `retrato-m02.webp` | 900 × 900 | 0,49 | 0,39 | — |
 | `marcos-retrato.webp` | 600 × 800 | — | — | 0,50 |
-| `registro-cuaderno.webp` | 1000 × 1000 | 0,40 | 0,35 | — |
+| `registro-cuaderno.webp` | 1239 × 1269 | 0,61 | 0,28 | — |
 
 ### M-02 · estado de los dos puntos abiertos (actualizado 2026-09-02)
 

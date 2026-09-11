@@ -36,7 +36,7 @@
 ## Qué ofrece
 
 - Entrenamiento personalizado presencial en Rosario — zona centro y zona Echesortu.
-- Entrenamiento online con seguimiento, sin límite geográfico.
+- Entrenamiento online con seguimiento.
 - El trabajo es el mismo en las dos modalidades y tiene cuatro tiempos: evaluar (una vez),
   planificar (cada mes), observar y corregir (cada semana; en el momento si es presencial,
   sobre videos si es online) y medir y ajustar (cada mes, con peso, medidas, fotos y cargas).
